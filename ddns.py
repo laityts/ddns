@@ -4,7 +4,7 @@ DDNS IP健康检查与自动管理脚本
 功能：检查域名DNS记录的IP可用性，自动从优选反代文件替换失效IP
 作者：根据用户需求编写
 日期：2025-10-04
-版本：v2.4 - 添加Telegram通知功能
+版本：v2.5 - 添加重复IP检查，确保不添加已存在的IP
 """
 
 import requests
@@ -214,7 +214,7 @@ class TelegramNotifier:
             logger.error(f"发送Telegram消息时发生未知错误: {str(e)}")
             return False
     
-    def send_health_alert(self, domain: str, failed_ips: List[Dict], deleted_count: int, added_count: int) -> bool:
+    def send_health_alert(self, domain: str, failed_ips: List[Dict], deleted_count: int, added_count: int, skipped_ips: List[str] = None) -> bool:
         """
         发送健康检查警报
         
@@ -223,6 +223,7 @@ class TelegramNotifier:
             failed_ips: 失败的IP列表
             deleted_count: 删除的记录数量
             added_count: 添加的记录数量
+            skipped_ips: 跳过的重复IP列表
             
         Returns:
             bool: 发送是否成功
@@ -242,6 +243,11 @@ class TelegramNotifier:
         
         if added_count > 0:
             message_lines.append(f"➕ <b>已添加记录:</b> {added_count} 条")
+        
+        if skipped_ips:
+            message_lines.append(f"⏭️  <b>跳过重复IP:</b> {len(skipped_ips)} 个")
+            for ip in skipped_ips:
+                message_lines.append(f"   • {ip}")
         
         if not message_lines:
             message_lines.append("✅ 所有DNS记录状态良好")
@@ -550,32 +556,52 @@ class CloudflareDDNSManager:
                 return False
         return True
     
-    def get_optimal_ips(self, count: int) -> List[str]:
+    def get_optimal_ips(self, count: int, existing_ips: List[str]) -> Tuple[List[str], List[str]]:
         """
-        从优选反代文件获取指定数量的IP列表
+        从优选反代文件获取指定数量的IP列表，排除已存在的IP
         
         Args:
             count: 需要获取的IP数量
+            existing_ips: 已存在的IP列表（用于去重）
             
         Returns:
-            IP地址列表
+            Tuple[List[str], List[str]]: (选中的IP列表, 跳过的重复IP列表)
         """
-        logger.info(f"需要获取 {count} 个优选IP")
+        logger.info(f"需要获取 {count} 个优选IP，排除 {len(existing_ips)} 个已存在IP")
         
         all_ips = self.read_optimal_ips_from_file()
         
         if not all_ips:
-            self.print_status("没有从文件获取到任何优选IP，使用备用IP列表", "warning")
-            # 备用IP列表
-            backup_ips = ["43.175.235.243", "43.175.234.243"]
-            selected_ips = backup_ips[:count]
-            self.print_status(f"使用备用IP: {', '.join(selected_ips)}", "info")
-            return selected_ips
+            self.print_status("没有从文件获取到任何优选IP，无法替换失效记录", "error")
+            return [], []
         
-        # 返回前count个IP
-        selected_ips = all_ips[:count]
-        self.print_status(f"选择 {len(selected_ips)} 个优选IP", "success")
-        return selected_ips
+        # 过滤掉已存在的IP
+        unique_ips = []
+        skipped_ips = []
+        
+        for ip in all_ips:
+            if ip in existing_ips:
+                skipped_ips.append(ip)
+                self.print_status(f"跳过重复IP: {ip}", "warning")
+            else:
+                unique_ips.append(ip)
+        
+        # 返回前count个唯一IP
+        selected_ips = unique_ips[:count]
+        
+        self.print_status(f"选择 {len(selected_ips)} 个优选IP，跳过 {len(skipped_ips)} 个重复IP", "success")
+        
+        if selected_ips:
+            print("📋 将要添加的IP列表:")
+            for ip in selected_ips:
+                print(f"   ➕ {ip}")
+        
+        if skipped_ips:
+            print("📋 跳过的重复IP列表:")
+            for ip in skipped_ips:
+                print(f"   ⏭️  {ip}")
+        
+        return selected_ips, skipped_ips
     
     def manage_dns_records(self, check_port: int = 8888):
         """
@@ -661,21 +687,32 @@ class CloudflareDDNSManager:
         else:
             self.print_status("没有需要删除的失败记录", "info")
         
-        # 4. 添加新的优选IP
+        # 4. 添加新的优选IP（避免重复）
         self.print_section("补充优选IP")
         added_count = 0
+        skipped_ips = []
+        
         if deleted_count > 0:
             self.print_status(f"需要补充 {deleted_count} 个新IP", "info")
-            optimal_ips = self.get_optimal_ips(deleted_count)
             
-            for ip in optimal_ips:
-                if self.create_dns_record(ip):
-                    added_count += 1
+            # 获取当前健康IP列表（用于去重）
+            current_healthy_ips = [record.get("content") for record in healthy_records]
+            self.print_status(f"当前有 {len(current_healthy_ips)} 个健康IP需要避免重复", "info")
+            
+            # 获取优选IP（排除已存在的）
+            optimal_ips, skipped_ips = self.get_optimal_ips(deleted_count, current_healthy_ips)
+            
+            if optimal_ips:
+                for ip in optimal_ips:
+                    if self.create_dns_record(ip):
+                        added_count += 1
+                    
+                    # 添加短暂延迟，避免API限制
+                    time.sleep(1)
                 
-                # 添加短暂延迟，避免API限制
-                time.sleep(1)
-            
-            self.print_status(f"成功添加 {added_count} 个新IP", "success")
+                self.print_status(f"成功添加 {added_count} 个新IP", "success")
+            else:
+                self.print_status("没有可用的优选IP，无法补充新记录", "warning")
         else:
             self.print_status("没有需要补充的新IP", "info")
         
@@ -686,7 +723,8 @@ class CloudflareDDNSManager:
                 domain=self.domain,
                 failed_ips=failed_records,
                 deleted_count=deleted_count,
-                added_count=added_count
+                added_count=added_count,
+                skipped_ips=skipped_ips
             )
         
         # 6. 最终状态汇总
@@ -694,6 +732,7 @@ class CloudflareDDNSManager:
         print("📊 最终统计报告:")
         print(f"   🗑️  删除失败记录: {deleted_count} 条")
         print(f"   ➕ 添加优选IP: {added_count} 个")
+        print(f"   ⏭️  跳过重复IP: {len(skipped_ips)} 个")
         print(f"   💚 当前健康记录: {len(healthy_records)} 条")
         
         if added_count == 0 and deleted_count == 0:
