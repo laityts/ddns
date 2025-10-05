@@ -14,6 +14,7 @@ SUCCESS_PROXY_FILE = 'proxyip.txt'  # 成功代理保存文件
 STANDARD_PORTS_FILE = '标准端口.txt'  # CF标准端口代理保存文件
 NON_STANDARD_FILE = '非标端口.txt'  # 非CF标准端口代理保存文件
 CSV_FILE = 'data.csv'  # 重命名后的CSV文件
+IPTEST_CSV_FILE = 'ip.csv'  # iptest生成的CSV文件
 
 # CF标准端口列表（基于Cloudflare支持的HTTP/HTTPS端口）
 STANDARD_PORTS = {
@@ -23,6 +24,29 @@ STANDARD_PORTS = {
 
 # 文件写入锁，确保多线程追加文件时不混乱
 file_lock = threading.Lock()
+
+# 步骤0: 删除之前生成的旧文件
+def cleanup_old_files():
+    """删除之前生成的旧文件"""
+    files_to_remove = [
+        PROXY_FILE,
+        SUCCESS_PROXY_FILE,
+        STANDARD_PORTS_FILE,
+        NON_STANDARD_FILE,
+        FULL_RESPONSES_FILE,
+        IPTEST_CSV_FILE
+    ]
+    
+    for file_path in files_to_remove:
+        try:
+            if os.path.exists(file_path):
+                os.remove(file_path)
+                print(f"已删除旧文件: {file_path}")
+        except Exception as e:
+            print(f"删除文件 {file_path} 时发生异常: {str(e)}")
+
+# 执行清理
+cleanup_old_files()
 
 # 步骤1: 使用通配符查找并重命名 *.csv 为 data.csv
 # 只处理第一个匹配的CSV文件，如果 ip.txt 不存在
@@ -43,7 +67,7 @@ except Exception as e:
     exit(1)
 
 # 步骤2: 从 data.csv 提取 ip 和 port 并保存到 ip.txt（如果 ip.txt 不存在）
-if not ip_txt_exists:
+if not os.path.exists(PROXY_FILE):
     try:
         if not os.path.exists(CSV_FILE):
             print(f"{CSV_FILE} 不存在，无法提取代理。")
@@ -87,6 +111,71 @@ if not ip_txt_exists:
         print(f"提取代理时发生异常: {str(e)}")
         exit(1)
 
+# 新增步骤: 执行 ./iptest 并处理生成的 ip.csv
+print("正在执行 ./iptest 命令...")
+try:
+    # 修改这里：实时显示执行过程
+    process = subprocess.Popen(['./iptest'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1, universal_newlines=True)
+    
+    # 实时读取并显示输出
+    print("=" * 50)
+    print("iptest 执行输出:")
+    print("=" * 50)
+    
+    while True:
+        output = process.stdout.readline()
+        if output == '' and process.poll() is not None:
+            break
+        if output:
+            print(output.strip())
+    
+    returncode = process.poll()
+    
+    if returncode != 0:
+        print(f"执行 ./iptest 失败，返回码: {returncode}")
+    else:
+        print("./iptest 执行成功")
+        
+        # 检查是否生成了 ip.csv
+        if os.path.exists(IPTEST_CSV_FILE):
+            print(f"检测到 {IPTEST_CSV_FILE} 文件，开始提取代理信息...")
+            
+            # 从 ip.csv 提取 ip 和端口，覆盖写入 ip.txt
+            valid_count = 0
+            with open(IPTEST_CSV_FILE, 'r', newline='', encoding='utf-8') as csvfile:
+                reader = csv.reader(csvfile)
+                headers = next(reader, None)  # 读取表头行
+                
+                if headers and len(headers) >= 2:
+                    # 查找IP和端口列的位置（前两列）
+                    ip_col_idx = 0
+                    port_col_idx = 1
+                    
+                    # 清空并重新写入 ip.txt
+                    with open(PROXY_FILE, 'w', encoding='utf-8') as f:
+                        for row in reader:
+                            if len(row) > max(ip_col_idx, port_col_idx):
+                                ip = row[ip_col_idx].strip()
+                                port = row[port_col_idx].strip()
+                                if ip and port and port.isdigit():
+                                    f.write(f"{ip} {port}\n")
+                                    valid_count += 1
+                    
+                    print(f"从 {IPTEST_CSV_FILE} 提取了 {valid_count} 个有效代理到 {PROXY_FILE}")
+                else:
+                    print(f"{IPTEST_CSV_FILE} 文件格式不正确")
+        else:
+            print(f"未找到 {IPTEST_CSV_FILE} 文件")
+            
+except subprocess.TimeoutExpired:
+    print("./iptest 执行超时")
+except FileNotFoundError:
+    print("未找到 ./iptest 命令")
+except Exception as e:
+    print(f"执行 ./iptest 时发生异常: {str(e)}")
+
+print("=" * 50)
+
 # 步骤3: 读取 ip.txt 中的代理列表
 proxies = []
 try:
@@ -96,6 +185,7 @@ try:
     if not proxies:
         print(f"{PROXY_FILE} 中无有效代理，将退出。")
         exit(1)
+    print(f"从 {PROXY_FILE} 读取了 {len(proxies)} 个代理")
 except FileNotFoundError:
     print(f"文件 {PROXY_FILE} 不存在。")
     exit(1)
@@ -219,7 +309,7 @@ except Exception as e:
     print(f"保存 {SUCCESS_PROXY_FILE} 时发生异常: {str(e)}")
     exit(1)
 
-# 步骤7: 从 proxyip.txt 分离标准端口和非标准端口代理
+# 步骤7: 从 proxyip.txt 分离标准端口和非标准端口代理，并进行排序
 try:
     standard_proxies = []
     non_standard_proxies = []
@@ -233,29 +323,37 @@ try:
                 try:
                     ip_port_part = line.split('#')[0]
                     _, port = ip_port_part.rsplit(':', 1)
+                    response_time = int(line.split('#')[1].replace('ms', ''))  # 提取响应时间
+                    
                     if port in STANDARD_PORTS:
-                        standard_proxies.append(line)
+                        standard_proxies.append((port, response_time, line))
                     else:
-                        non_standard_proxies.append(line)
+                        non_standard_proxies.append((port, response_time, line))
                 except ValueError:
                     print(f"无效行格式: {line}")
                     continue
     
+    # 对标准端口代理排序：先按端口号（数字），再按响应时间
+    standard_proxies.sort(key=lambda x: (int(x[0]), x[1]))
+    
+    # 对非标准端口代理排序：先按端口号（数字），再按响应时间
+    non_standard_proxies.sort(key=lambda x: (int(x[0]), x[1]))
+    
     # 保存标准端口代理
     if standard_proxies:
         with open(STANDARD_PORTS_FILE, 'w', encoding='utf-8') as f:
-            for proxy in standard_proxies:
+            for _, _, proxy in standard_proxies:
                 f.write(f"{proxy}\n")
-        print(f"提取了 {len(standard_proxies)} 个CF标准端口代理到 {STANDARD_PORTS_FILE}")
+        print(f"提取了 {len(standard_proxies)} 个CF标准端口代理到 {STANDARD_PORTS_FILE}（已按端口和响应时间排序）")
     else:
         print(f"无CF标准端口代理。")
     
     # 保存非标准端口代理
     if non_standard_proxies:
         with open(NON_STANDARD_FILE, 'w', encoding='utf-8') as f:
-            for proxy in non_standard_proxies:
+            for _, _, proxy in non_standard_proxies:
                 f.write(f"{proxy}\n")
-        print(f"提取了 {len(non_standard_proxies)} 个非CF标准端口代理到 {NON_STANDARD_FILE}")
+        print(f"提取了 {len(non_standard_proxies)} 个非CF标准端口代理到 {NON_STANDARD_FILE}（已按端口和响应时间排序）")
     else:
         print(f"无非CF标准端口代理。")
         
@@ -271,8 +369,8 @@ print("="*80)
 
 # 分别显示标准端口和非标准端口代理
 if standard_proxies:
-    print("\nCF标准端口代理:")
-    for proxy in standard_proxies:
+    print("\nCF标准端口代理 (已按端口和响应时间排序):")
+    for _, _, proxy in standard_proxies:
         parts = proxy.split('#')
         if len(parts) >= 2:
             ip_port = parts[0]
@@ -283,8 +381,8 @@ if standard_proxies:
         print(f"  ✓ {display_proxy}")
 
 if non_standard_proxies:
-    print("\n非CF标准端口代理:")
-    for proxy in non_standard_proxies:
+    print("\n非CF标准端口代理 (已按端口和响应时间排序):")
+    for _, _, proxy in non_standard_proxies:
         parts = proxy.split('#')
         if len(parts) >= 2:
             ip_port = parts[0]
