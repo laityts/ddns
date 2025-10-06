@@ -15,6 +15,12 @@ STANDARD_PORTS_FILE = '标准端口.txt'  # CF标准端口代理保存文件
 NON_STANDARD_FILE = '非标端口.txt'  # 非CF标准端口代理保存文件
 CSV_FILE = 'data.csv'  # 重命名后的CSV文件
 IPTEST_CSV_FILE = 'ip.csv'  # iptest生成的CSV文件
+PREFERRED_PROXY_FILE = '优选反代.txt'  # 优选代理保存文件
+
+# 配置变量 - 用户可以修改这些值
+PREFERRED_COUNTRY = '新加坡'  # 优选国家，如果为空则提取所有国家IP，例如: '新加坡'
+PREFERRED_MAX_RESPONSE_TIME = 350  # 优选反代的最大响应时间阈值（毫秒）
+PREFERRED_PROXY_PORT = '443'  # 优选反代端口，如果为空则不进行端口筛选，例如: '443' 或 '80,443,2053'
 
 # CF标准端口列表（基于Cloudflare支持的HTTP/HTTPS端口）
 STANDARD_PORTS = {
@@ -34,7 +40,8 @@ def cleanup_old_files():
         STANDARD_PORTS_FILE,
         NON_STANDARD_FILE,
         FULL_RESPONSES_FILE,
-        IPTEST_CSV_FILE
+        IPTEST_CSV_FILE,
+        PREFERRED_PROXY_FILE
     ]
     
     for file_path in files_to_remove:
@@ -83,24 +90,38 @@ if not os.path.exists(PROXY_FILE):
             # 查找列索引，支持忽略大小写
             ip_col_idx = next((i for i, h in enumerate(headers) if h.lower() == 'ip'), -1)
             port_col_idx = next((i for i, h in enumerate(headers) if h.lower() == 'port'), -1)
+            country_name_col_idx = next((i for i, h in enumerate(headers) if h.lower() == 'country_name'), -1)
+            
             if ip_col_idx == -1 or port_col_idx == -1:
                 print("CSV中未找到 'ip' 和 'port' 列（忽略大小写）。")
                 exit(1)
             
-            # 读取数据行并写入 ip.txt，跳过空行和无效行
+            # 读取数据行并写入 ip.txt
             valid_count = 0
             with open(PROXY_FILE, 'w', encoding='utf-8') as f:
                 for row in reader:
-                    if len(row) > max(ip_col_idx, port_col_idx):
+                    if len(row) > max(ip_col_idx, port_col_idx, country_name_col_idx):
                         ip = row[ip_col_idx].strip()
                         port = row[port_col_idx].strip()
-                        if ip and port and port.isdigit():  # 优化：确保端口是数字
-                            f.write(f"{ip} {port}\n")
-                            valid_count += 1
+                        country = row[country_name_col_idx].strip() if country_name_col_idx != -1 else ""
+                        
+                        # 根据是否设置了优选国家来决定过滤条件
+                        if ip and port and port.isdigit():
+                            if not PREFERRED_COUNTRY or country == PREFERRED_COUNTRY:
+                                f.write(f"{ip} {port}\n")
+                                valid_count += 1
+            
             if valid_count == 0:
-                print("CSV中无有效IP和端口。")
+                if PREFERRED_COUNTRY:
+                    print(f"CSV中无优选国家 '{PREFERRED_COUNTRY}' 的有效IP和端口。")
+                else:
+                    print("CSV中无有效IP和端口。")
                 exit(1)
-            print(f"已将 {valid_count} 个有效IPs和ports提取到 {PROXY_FILE}")
+            
+            if PREFERRED_COUNTRY:
+                print(f"已将 {valid_count} 个优选国家 '{PREFERRED_COUNTRY}' 的有效IPs和ports提取到 {PROXY_FILE}")
+            else:
+                print(f"已将 {valid_count} 个所有国家的有效IPs和ports提取到 {PROXY_FILE}")
     except FileNotFoundError:
         print(f"文件 {CSV_FILE} 不存在。")
         exit(1)
@@ -146,22 +167,30 @@ try:
                 reader = csv.reader(csvfile)
                 headers = next(reader, None)  # 读取表头行
                 
-                if headers and len(headers) >= 2:
-                    # 查找IP和端口列的位置（前两列）
+                if headers and len(headers) >= 9:  # 确保有足够的列
+                    # 查找IP、端口和国家列的位置
                     ip_col_idx = 0
                     port_col_idx = 1
+                    country_col_idx = 8  # 国家在第9列（0-indexed）
                     
-                    # 清空并重新写入 ip.txt
+                    # 清空并重新写入 ip.txt，根据优选国家过滤
                     with open(PROXY_FILE, 'w', encoding='utf-8') as f:
                         for row in reader:
-                            if len(row) > max(ip_col_idx, port_col_idx):
+                            if len(row) > max(ip_col_idx, port_col_idx, country_col_idx):
                                 ip = row[ip_col_idx].strip()
                                 port = row[port_col_idx].strip()
+                                country = row[country_col_idx].strip()
+                                
+                                # 根据是否设置了优选国家来决定过滤条件
                                 if ip and port and port.isdigit():
-                                    f.write(f"{ip} {port}\n")
-                                    valid_count += 1
+                                    if not PREFERRED_COUNTRY or country == PREFERRED_COUNTRY:
+                                        f.write(f"{ip} {port}\n")
+                                        valid_count += 1
                     
-                    print(f"从 {IPTEST_CSV_FILE} 提取了 {valid_count} 个有效代理到 {PROXY_FILE}")
+                    if PREFERRED_COUNTRY:
+                        print(f"从 {IPTEST_CSV_FILE} 提取了 {valid_count} 个优选国家 '{PREFERRED_COUNTRY}' 的有效代理到 {PROXY_FILE}")
+                    else:
+                        print(f"从 {IPTEST_CSV_FILE} 提取了 {valid_count} 个所有国家的有效代理到 {PROXY_FILE}")
                 else:
                     print(f"{IPTEST_CSV_FILE} 文件格式不正确")
         else:
@@ -279,7 +308,7 @@ def check_proxy(ip_port):
 
 # 步骤5: 使用 ThreadPoolExecutor 进行并发检查
 try:
-    max_workers = min(50, len(proxies))  # 限制最大线程数，避免资源耗尽
+    max_workers = min(10, len(proxies))  # 限制最大线程数，避免资源耗尽
     successful_proxies = []
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         future_to_proxy = {executor.submit(check_proxy, proxy): proxy for proxy in proxies}
@@ -308,6 +337,67 @@ try:
 except Exception as e:
     print(f"保存 {SUCCESS_PROXY_FILE} 时发生异常: {str(e)}")
     exit(1)
+
+# 新增步骤: 从 proxyip.txt 提取响应时间小于设定阈值的代理到 优选反代.txt
+try:
+    # 清空优选反代.txt文件
+    with open(PREFERRED_PROXY_FILE, 'w', encoding='utf-8') as f:
+        pass
+    
+    preferred_proxies = []
+    preferred_port_proxies = []  # 根据端口筛选后的代理
+    
+    if os.path.exists(SUCCESS_PROXY_FILE):
+        with open(SUCCESS_PROXY_FILE, 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    # 提取响应时间和端口
+                    ip_port_part = line.split('#')[0]
+                    _, port = ip_port_part.rsplit(':', 1)
+                    response_time = int(line.split('#')[1].replace('ms', ''))
+                    
+                    # 如果响应时间小于设定阈值，则添加到优选列表
+                    if response_time < PREFERRED_MAX_RESPONSE_TIME:
+                        preferred_proxies.append((response_time, line, port))
+                except (ValueError, IndexError):
+                    print(f"无效行格式: {line}")
+                    continue
+    
+    # 按端口（从小到大）和响应时间（从小到大）排序
+    preferred_proxies.sort(key=lambda x: (int(x[2]), x[0]))
+    
+    # 如果设置了优选反代端口，进行端口筛选
+    if PREFERRED_PROXY_PORT:
+        # 处理多个端口的情况（用逗号分隔）
+        preferred_ports = [p.strip() for p in PREFERRED_PROXY_PORT.split(',') if p.strip()]
+        
+        for response_time, proxy, port in preferred_proxies:
+            if port in preferred_ports:
+                preferred_port_proxies.append((response_time, proxy))
+        
+        # 保存端口筛选后的优选代理
+        if preferred_port_proxies:
+            with open(PREFERRED_PROXY_FILE, 'w', encoding='utf-8') as f:
+                for _, proxy in preferred_port_proxies:
+                    f.write(f"{proxy}\n")
+            print(f"提取了 {len(preferred_port_proxies)} 个响应时间小于{PREFERRED_MAX_RESPONSE_TIME}ms且端口为{PREFERRED_PROXY_PORT}的优选代理到 {PREFERRED_PROXY_FILE}")
+        else:
+            print(f"无响应时间小于{PREFERRED_MAX_RESPONSE_TIME}ms且端口为{PREFERRED_PROXY_PORT}的优选代理。")
+    else:
+        # 没有设置端口筛选，直接保存所有优选代理
+        if preferred_proxies:
+            with open(PREFERRED_PROXY_FILE, 'w', encoding='utf-8') as f:
+                for _, proxy, _ in preferred_proxies:
+                    f.write(f"{proxy}\n")
+            print(f"提取了 {len(preferred_proxies)} 个响应时间小于{PREFERRED_MAX_RESPONSE_TIME}ms的优选代理到 {PREFERRED_PROXY_FILE}")
+        else:
+            print(f"无响应时间小于{PREFERRED_MAX_RESPONSE_TIME}ms的优选代理。")
+        
+except Exception as e:
+    print(f"提取优选代理时发生异常: {str(e)}")
 
 # 步骤7: 从 proxyip.txt 分离标准端口和非标准端口代理，并进行排序
 try:
@@ -367,6 +457,30 @@ print("\n" + "="*80)
 print("代理检查完成！以下是成功代理：")
 print("="*80)
 
+# 显示优选代理（响应时间小于设定阈值）
+if PREFERRED_PROXY_PORT and preferred_port_proxies:
+    print(f"\n优选代理 (响应时间 < {PREFERRED_MAX_RESPONSE_TIME}ms 且端口为 {PREFERRED_PROXY_PORT}):")
+    for _, proxy in preferred_port_proxies:
+        parts = proxy.split('#')
+        if len(parts) >= 2:
+            ip_port = parts[0]
+            status = parts[1]
+            display_proxy = f"{ip_port} ({status})"
+        else:
+            display_proxy = proxy
+        print(f"  ★ {display_proxy}")
+elif not PREFERRED_PROXY_PORT and preferred_proxies:
+    print(f"\n优选代理 (响应时间 < {PREFERRED_MAX_RESPONSE_TIME}ms):")
+    for _, proxy, _ in preferred_proxies:
+        parts = proxy.split('#')
+        if len(parts) >= 2:
+            ip_port = parts[0]
+            status = parts[1]
+            display_proxy = f"{ip_port} ({status})"
+        else:
+            display_proxy = proxy
+        print(f"  ★ {display_proxy}")
+
 # 分别显示标准端口和非标准端口代理
 if standard_proxies:
     print("\nCF标准端口代理 (已按端口和响应时间排序):")
@@ -394,6 +508,12 @@ if non_standard_proxies:
 
 print("="*80)
 print(f"总共保存 {len(successful_proxies)} 个成功代理到 {SUCCESS_PROXY_FILE}")
+
+if PREFERRED_PROXY_PORT:
+    print(f"优选代理 (响应时间 < {PREFERRED_MAX_RESPONSE_TIME}ms 且端口为 {PREFERRED_PROXY_PORT}): {len(preferred_port_proxies)} 个 -> {PREFERRED_PROXY_FILE}")
+else:
+    print(f"优选代理 (响应时间 < {PREFERRED_MAX_RESPONSE_TIME}ms): {len(preferred_proxies)} 个 -> {PREFERRED_PROXY_FILE}")
+
 print(f"CF标准端口代理: {len(standard_proxies)} 个 -> {STANDARD_PORTS_FILE}")
 print(f"非CF标准端口代理: {len(non_standard_proxies)} 个 -> {NON_STANDARD_FILE}")
 print(f"完整curl响应（所有代理）已保存到 {FULL_RESPONSES_FILE}")

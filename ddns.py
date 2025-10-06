@@ -4,7 +4,7 @@ DDNS IP健康检查与自动管理脚本
 功能：检查域名DNS记录的IP可用性，自动从优选反代文件替换失效IP
 作者：根据用户需求编写
 日期：2025-10-04
-版本：v2.5 - 添加重复IP检查，确保不添加已存在的IP
+版本：v2.8 - 移除默认端口，要求用户明确指定
 """
 
 import requests
@@ -27,11 +27,11 @@ class ConfigManager:
     """配置管理器，支持环境变量和配置文件"""
     
     def __init__(self):
-        self.config_file = os.path.expanduser("~/.cloudflare_ddns_config")
+        self.config_file = ".cloudflare_ddns_config"  # 改为当前目录
         
     def load_config(self) -> Dict[str, str]:
         """
-        加载配置，优先级：环境变量 > 配置文件 > 默认值
+        加载配置，优先级：环境变量 > 配置文件
         如果配置文件不存在，自动创建
         
         Returns:
@@ -43,13 +43,13 @@ class ConfigManager:
         config['ZONE_ID'] = os.getenv('CLOUDFLARE_ZONE_ID', '')
         config['AUTH_EMAIL'] = os.getenv('CLOUDFLARE_AUTH_EMAIL', '')
         config['AUTH_KEY'] = os.getenv('CLOUDFLARE_AUTH_KEY', '')
-        config['DOMAIN'] = os.getenv('CLOUDFLARE_DOMAIN', 'sg.616049.xyz')
-        config['CHECK_PORT'] = os.getenv('CLOUDFLARE_CHECK_PORT', '8888')
+        config['DOMAIN'] = os.getenv('CLOUDFLARE_DOMAIN', '')
+        config['CHECK_PORT'] = os.getenv('CLOUDFLARE_CHECK_PORT', '')  # 移除默认值，要求用户明确指定
         config['BOT_TOKEN'] = os.getenv('TELEGRAM_BOT_TOKEN', '')
         config['CHAT_ID'] = os.getenv('TELEGRAM_CHAT_ID', '')
         
         # 如果环境变量没有完整配置，检查配置文件
-        if not all([config['ZONE_ID'], config['AUTH_EMAIL'], config['AUTH_KEY']]):
+        if not all([config['ZONE_ID'], config['AUTH_EMAIL'], config['AUTH_KEY'], config['DOMAIN']]):
             file_config = self._load_config_file()
             if file_config:
                 for key in ['ZONE_ID', 'AUTH_EMAIL', 'AUTH_KEY', 'DOMAIN', 'CHECK_PORT', 'BOT_TOKEN', 'CHAT_ID']:
@@ -102,11 +102,11 @@ AUTH_EMAIL=your_email@example.com
 # Cloudflare 全局API密钥
 AUTH_KEY=your_global_api_key_here
 
-# 要管理的域名 (默认: sg.616049.xyz)
-DOMAIN=sg.616049.xyz
+# 要管理的域名 (必需，例如: example.com)
+DOMAIN=your_domain_here
 
-# 健康检查端口 (默认: 8888)
-CHECK_PORT=8888
+# 健康检查端口 (必需，例如: 443, 80, 8080 等)
+CHECK_PORT=443
 
 # Telegram 机器人令牌 (可选，用于发送通知)
 BOT_TOKEN=your_bot_token_here
@@ -115,11 +115,6 @@ BOT_TOKEN=your_bot_token_here
 CHAT_ID=your_chat_id_here
 """
         try:
-            # 确保目录存在
-            config_dir = os.path.dirname(self.config_file)
-            if config_dir and not os.path.exists(config_dir):
-                os.makedirs(config_dir, mode=0o700)
-            
             with open(self.config_file, 'w', encoding='utf-8') as f:
                 f.write(config_template)
             os.chmod(self.config_file, 0o600)  # 设置文件权限为仅用户可读写
@@ -135,14 +130,13 @@ CHAT_ID=your_chat_id_here
         print("  export CLOUDFLARE_ZONE_ID=\"您的区域ID\"")
         print("  export CLOUDFLARE_AUTH_EMAIL=\"您的邮箱\"")
         print("  export CLOUDFLARE_AUTH_KEY=\"您的API密钥\"")
-        print("  export CLOUDFLARE_DOMAIN=\"sg.616049.xyz\"")
-        print("  export CLOUDFLARE_CHECK_PORT=\"8888\"")
+        print("  export CLOUDFLARE_DOMAIN=\"您的域名\"")
+        print("  export CLOUDFLARE_CHECK_PORT=\"检查端口号\"")  # 更新说明
         print("  export TELEGRAM_BOT_TOKEN=\"您的机器人令牌\"")
         print("  export TELEGRAM_CHAT_ID=\"您的聊天ID\"")
-        print("\n  在Termux中，可以将这些命令添加到 ~/.bashrc 文件中")
         
         print("\n方法2: 使用配置文件")
-        print(f"  脚本会在 {self.config_file} 自动创建配置文件模板")
+        print(f"  脚本会在当前目录的 {self.config_file} 自动创建配置文件模板")
         print("  请编辑该文件并填入您的实际信息")
 
 class TelegramNotifier:
@@ -256,6 +250,35 @@ class TelegramNotifier:
         
         message = "\n".join(message_lines)
         return self.send_message(message, domain)
+    
+    def send_initialization_alert(self, domain: str, added_ips: List[str], total_added: int) -> bool:
+        """
+        发送初始化DNS记录通知
+        
+        Args:
+            domain: 域名
+            added_ips: 添加的IP列表
+            total_added: 总共添加的记录数量
+            
+        Returns:
+            bool: 发送是否成功
+        """
+        if not self.enabled:
+            return False
+            
+        message_lines = ["🎯 <b>DNS记录初始化完成</b>"]
+        message_lines.append(f"🌐 域名: {domain}")
+        message_lines.append(f"📊 添加记录: {total_added} 条")
+        
+        if added_ips:
+            message_lines.append("\n📋 已添加IP列表:")
+            for ip in added_ips:
+                message_lines.append(f"   • {ip}")
+        
+        message_lines.append(f"\n⏰ 时间: {time.strftime('%Y-%m-%d %H:%M:%S')}")
+        
+        message = "\n".join(message_lines)
+        return self.send_message(message, domain)
 
 class CloudflareDDNSManager:
     def __init__(self, zone_id: str, auth_email: str, auth_key: str, domain: str, bot_token: str = "", chat_id: str = ""):
@@ -266,7 +289,7 @@ class CloudflareDDNSManager:
             zone_id: Cloudflare区域ID
             auth_email: Cloudflare账户邮箱
             auth_key: Cloudflare全局API密钥
-            domain: 要管理的域名(如:sg.616049.xyz)
+            domain: 要管理的域名(必需)
             bot_token: Telegram机器人令牌
             chat_id: Telegram聊天ID
         """
@@ -307,7 +330,7 @@ class CloudflareDDNSManager:
         }
         icon = icons.get(status, "📝")
         print(f"{icon} {message}")
-        
+    
     def get_current_dns_records(self) -> List[Dict[str, Any]]:
         """
         获取域名当前的DNS记录
@@ -353,13 +376,13 @@ class CloudflareDDNSManager:
             self.print_status(f"未知错误: {str(e)}", "error")
             return []
     
-    def check_ip_health(self, ip: str, port: int = 80) -> Tuple[bool, Dict[str, Any]]:
+    def check_ip_health(self, ip: str, port: int) -> Tuple[bool, Dict[str, Any]]:
         """
         检查IP地址的健康状态
         
         Args:
             ip: 要检查的IP地址
-            port: 检查的端口号
+            port: 检查的端口号（必需）
             
         Returns:
             Tuple[bool, Dict]: (是否健康, 详细检查结果)
@@ -603,12 +626,68 @@ class CloudflareDDNSManager:
         
         return selected_ips, skipped_ips
     
-    def manage_dns_records(self, check_port: int = 8888):
+    def initialize_dns_records(self, target_count: int = 5, check_port: int = 443) -> Tuple[int, List[str]]:
+        """
+        当DNS记录为空时，从优选反代文件初始化DNS记录
+        
+        Args:
+            target_count: 目标DNS记录数量
+            check_port: 健康检查端口
+            
+        Returns:
+            Tuple[int, List[str]]: (成功添加的记录数量, 添加的IP列表)
+        """
+        self.print_section("初始化DNS记录")
+        self.print_status(f"DNS记录为空，开始初始化，目标数量: {target_count}", "info")
+        
+        # 读取优选IP文件
+        all_ips = self.read_optimal_ips_from_file()
+        
+        if not all_ips:
+            self.print_status("优选IP文件为空，无法初始化DNS记录", "error")
+            return 0, []
+        
+        # 计算需要添加的IP数量
+        ips_to_add = all_ips[:target_count]
+        self.print_status(f"计划添加 {len(ips_to_add)} 个IP到DNS记录", "info")
+        
+        if ips_to_add:
+            print("📋 将要添加的IP列表:")
+            for ip in ips_to_add:
+                print(f"   ➕ {ip}")
+        
+        # 逐个创建DNS记录
+        added_count = 0
+        added_ips = []
+        
+        for ip in ips_to_add:
+            if self.create_dns_record(ip):
+                added_count += 1
+                added_ips.append(ip)
+                self.print_status(f"成功添加DNS记录: {ip}", "success")
+            else:
+                self.print_status(f"添加DNS记录失败: {ip}", "error")
+            
+            # 添加延迟避免API限制
+            time.sleep(1)
+        
+        # 发送初始化通知
+        if added_count > 0:
+            self.notifier.send_initialization_alert(
+                domain=self.domain,
+                added_ips=added_ips,
+                total_added=added_count
+            )
+        
+        self.print_status(f"DNS记录初始化完成，成功添加 {added_count} 条记录", "success")
+        return added_count, added_ips
+    
+    def manage_dns_records(self, check_port: int):
         """
         主管理函数：检查并管理DNS记录
         
         Args:
-            check_port: 检查IP时使用的端口号
+            check_port: 检查IP时使用的端口号（必需）
         """
         self.print_banner(f"开始管理域名 {self.domain}")
         print(f"🔧 检查端口: {check_port}")
@@ -616,8 +695,20 @@ class CloudflareDDNSManager:
         # 1. 获取当前DNS记录
         self.print_section("获取当前DNS记录")
         current_records = self.get_current_dns_records()
+        
+        # 如果DNS记录为空，则初始化DNS记录
         if not current_records:
-            self.print_status("未找到DNS记录，退出管理", "error")
+            self.print_status("DNS记录为空，开始初始化", "info")
+            added_count, added_ips = self.initialize_dns_records(target_count=5, check_port=check_port)
+            
+            if added_count > 0:
+                self.print_banner("DNS记录初始化完成")
+                print(f"✅ 成功添加 {added_count} 条DNS记录")
+                print("📋 已添加的IP:")
+                for ip in added_ips:
+                    print(f"   • {ip}")
+            else:
+                self.print_status("DNS记录初始化失败", "error")
             return
         
         # 2. 检查每个IP的健康状态
@@ -707,7 +798,7 @@ class CloudflareDDNSManager:
                     if self.create_dns_record(ip):
                         added_count += 1
                     
-                    # 添加短暂延迟，避免API限制
+                    # 添加延迟避免API限制
                     time.sleep(1)
                 
                 self.print_status(f"成功添加 {added_count} 个新IP", "success")
@@ -748,10 +839,13 @@ def main():
     config = config_manager.load_config()
     
     # 检查必要配置
-    if not all([config.get('ZONE_ID'), config.get('AUTH_EMAIL'), config.get('AUTH_KEY')]):
+    required_configs = ['ZONE_ID', 'AUTH_EMAIL', 'AUTH_KEY', 'DOMAIN', 'CHECK_PORT']  # 添加CHECK_PORT为必需
+    missing_configs = [key for key in required_configs if not config.get(key)]
+    
+    if missing_configs:
         print("\n❌ 配置缺失")
         print("=" * 40)
-        print("未找到完整的Cloudflare配置信息")
+        print(f"缺少以下必要配置: {', '.join(missing_configs)}")
         
         config_manager.print_config_help()
         
@@ -768,8 +862,8 @@ def main():
     ZONE_ID = config['ZONE_ID']
     AUTH_EMAIL = config['AUTH_EMAIL']
     AUTH_KEY = config['AUTH_KEY']
-    DOMAIN = config.get('DOMAIN', 'sg.616049.xyz')
-    CHECK_PORT = int(config.get('CHECK_PORT', '8888'))
+    DOMAIN = config['DOMAIN']
+    CHECK_PORT = int(config['CHECK_PORT'])  # 现在CHECK_PORT是必需的，直接转换
     BOT_TOKEN = config.get('BOT_TOKEN', '')
     CHAT_ID = config.get('CHAT_ID', '')
     

@@ -1,34 +1,4 @@
 
---- 代理: 192.46.231.158:74 ---
-检查结果:
-STDOUT: {
-  "success": false,
-  "proxyIP": "192.46.231.158",
-  "portRemote": 74,
-  "colo": "AMS",
-  "responseTime": -1,
-  "message": "无法通过ProxyIP访问Cloudflare",
-  "timestamp": "2025-10-05T19:59:52.100Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 139.177.185.196:20205 ---
-检查结果:
-STDOUT: {
-  "success": false,
-  "proxyIP": "139.177.185.196",
-  "portRemote": 20205,
-  "colo": "AMS",
-  "responseTime": -1,
-  "message": "无法通过ProxyIP访问Cloudflare",
-  "timestamp": "2025-10-05T19:59:52.188Z"
-}
-STDERR: 
-Return Code: 0
-
-
 --- 代理: 139.177.185.88:74 ---
 检查结果:
 STDOUT: {
@@ -38,187 +8,22 @@ STDOUT: {
   "colo": "AMS",
   "responseTime": -1,
   "message": "无法通过ProxyIP访问Cloudflare",
-  "timestamp": "2025-10-05T19:59:52.186Z"
+  "timestamp": "2025-10-06T04:07:50.874Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 8.219.243.83:18377 ---
+--- 代理: 13.212.19.68:56138 ---
 检查结果:
 STDOUT: {
   "success": true,
-  "proxyIP": "8.219.243.83",
-  "portRemote": 18377,
+  "proxyIP": "13.212.19.68",
+  "portRemote": 56138,
   "colo": "AMS",
-  "responseTime": 330,
+  "responseTime": 338,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:52.562Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 192.46.231.158:20205 ---
-检查结果:
-STDOUT: {
-  "success": false,
-  "proxyIP": "192.46.231.158",
-  "portRemote": 20205,
-  "colo": "AMS",
-  "responseTime": -1,
-  "message": "无法通过ProxyIP访问Cloudflare",
-  "timestamp": "2025-10-05T19:59:52.591Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 103.192.178.50:33438 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "103.192.178.50",
-  "portRemote": 33438,
-  "colo": "AMS",
-  "responseTime": 387,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:52.693Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 8.219.56.26:40011 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "8.219.56.26",
-  "portRemote": 40011,
-  "colo": "AMS",
-  "responseTime": 342,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:52.691Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 166.108.239.108:3389 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "166.108.239.108",
-  "portRemote": 3389,
-  "colo": "AMS",
-  "responseTime": 322,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:52.692Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 111.119.200.18:57316 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "111.119.200.18",
-  "portRemote": 57316,
-  "colo": "AMS",
-  "responseTime": 333,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:52.732Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 139.177.185.196:74 ---
-检查结果:
-STDOUT: {
-  "success": false,
-  "proxyIP": "139.177.185.196",
-  "portRemote": 74,
-  "colo": "AMS",
-  "responseTime": -1,
-  "message": "无法通过ProxyIP访问Cloudflare",
-  "timestamp": "2025-10-05T19:59:52.758Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 129.226.146.183:51220 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "129.226.146.183",
-  "portRemote": 51220,
-  "colo": "AMS",
-  "responseTime": 473,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:52.879Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 43.100.21.205:20027 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "43.100.21.205",
-  "portRemote": 20027,
-  "colo": "AMS",
-  "responseTime": 385,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:52.829Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 47.236.71.60:28443 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "47.236.71.60",
-  "portRemote": 28443,
-  "colo": "AMS",
-  "responseTime": 330,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:52.882Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 43.165.190.101:25891 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "43.165.190.101",
-  "portRemote": 25891,
-  "colo": "AMS",
-  "responseTime": 503,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:52.913Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 47.130.35.116:8888 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "47.130.35.116",
-  "portRemote": 8888,
-  "colo": "AMS",
-  "responseTime": 329,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:52.946Z"
+  "timestamp": "2025-10-06T04:07:51.293Z"
 }
 STDERR: 
 Return Code: 0
@@ -231,24 +36,9 @@ STDOUT: {
   "proxyIP": "8.219.88.178",
   "portRemote": 51898,
   "colo": "AMS",
-  "responseTime": 359,
+  "responseTime": 328,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:52.980Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 83.229.123.194:35134 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "83.229.123.194",
-  "portRemote": 35134,
-  "colo": "AMS",
-  "responseTime": 394,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:52.991Z"
+  "timestamp": "2025-10-06T04:07:51.306Z"
 }
 STDERR: 
 Return Code: 0
@@ -261,9 +51,114 @@ STDOUT: {
   "proxyIP": "185.223.207.115",
   "portRemote": 5443,
   "colo": "AMS",
-  "responseTime": 335,
+  "responseTime": 330,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.100Z"
+  "timestamp": "2025-10-06T04:07:51.337Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 8.219.243.83:18377 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "8.219.243.83",
+  "portRemote": 18377,
+  "colo": "AMS",
+  "responseTime": 344,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:51.351Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 166.108.239.108:3389 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "166.108.239.108",
+  "portRemote": 3389,
+  "colo": "AMS",
+  "responseTime": 329,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:51.324Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 47.236.180.90:8443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "47.236.180.90",
+  "portRemote": 8443,
+  "colo": "AMS",
+  "responseTime": 327,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:51.391Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 111.119.200.18:57316 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "111.119.200.18",
+  "portRemote": 57316,
+  "colo": "AMS",
+  "responseTime": 326,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:51.377Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 47.236.185.184:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "47.236.185.184",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 328,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:51.420Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 47.236.71.60:28443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "47.236.71.60",
+  "portRemote": 28443,
+  "colo": "AMS",
+  "responseTime": 339,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:52.358Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 192.46.231.158:443 ---
+检查结果:
+STDOUT: {
+  "success": false,
+  "proxyIP": "192.46.231.158",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:07:52.490Z"
 }
 STDERR: 
 Return Code: 0
@@ -276,159 +171,9 @@ STDOUT: {
   "proxyIP": "8.219.243.43",
   "portRemote": 10000,
   "colo": "AMS",
-  "responseTime": 317,
+  "responseTime": 319,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.113Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 146.70.29.27:20205 ---
-检查结果:
-STDOUT: {
-  "success": false,
-  "proxyIP": "146.70.29.27",
-  "portRemote": 20205,
-  "colo": "AMS",
-  "responseTime": -1,
-  "message": "无法通过ProxyIP访问Cloudflare",
-  "timestamp": "2025-10-05T19:59:53.130Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 4.194.131.141:8081 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "4.194.131.141",
-  "portRemote": 8081,
-  "colo": "AMS",
-  "responseTime": 337,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.155Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 47.236.173.242:29887 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "47.236.173.242",
-  "portRemote": 29887,
-  "colo": "AMS",
-  "responseTime": 322,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.200Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 8.219.75.62:44810 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "8.219.75.62",
-  "portRemote": 44810,
-  "colo": "AMS",
-  "responseTime": 346,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.290Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 47.236.246.213:40389 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "47.236.246.213",
-  "portRemote": 40389,
-  "colo": "AMS",
-  "responseTime": 321,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.325Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 103.195.188.66:22222 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "103.195.188.66",
-  "portRemote": 22222,
-  "colo": "AMS",
-  "responseTime": 330,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.385Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 45.77.47.155:20205 ---
-检查结果:
-STDOUT: {
-  "success": false,
-  "proxyIP": "45.77.47.155",
-  "portRemote": 20205,
-  "colo": "AMS",
-  "responseTime": -1,
-  "message": "无法通过ProxyIP访问Cloudflare",
-  "timestamp": "2025-10-05T19:59:53.432Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 45.127.34.182:441 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "45.127.34.182",
-  "portRemote": 441,
-  "colo": "AMS",
-  "responseTime": 338,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.412Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 168.138.171.70:23280 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "168.138.171.70",
-  "portRemote": 23280,
-  "colo": "AMS",
-  "responseTime": 493,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.599Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 45.77.47.155:74 ---
-检查结果:
-STDOUT: {
-  "success": false,
-  "proxyIP": "45.77.47.155",
-  "portRemote": 74,
-  "colo": "AMS",
-  "responseTime": -1,
-  "message": "无法通过ProxyIP访问Cloudflare",
-  "timestamp": "2025-10-05T19:59:53.626Z"
+  "timestamp": "2025-10-06T04:07:52.620Z"
 }
 STDERR: 
 Return Code: 0
@@ -441,24 +186,54 @@ STDOUT: {
   "proxyIP": "8.219.59.132",
   "portRemote": 48130,
   "colo": "AMS",
-  "responseTime": 324,
+  "responseTime": 323,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.604Z"
+  "timestamp": "2025-10-06T04:07:52.775Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 43.153.201.129:666 ---
+--- 代理: 47.236.173.242:29887 ---
 检查结果:
 STDOUT: {
-  "success": false,
-  "proxyIP": "43.153.201.129",
-  "portRemote": 666,
+  "success": true,
+  "proxyIP": "47.236.173.242",
+  "portRemote": 29887,
   "colo": "AMS",
-  "responseTime": -1,
-  "message": "无法通过ProxyIP访问Cloudflare",
-  "timestamp": "2025-10-05T19:59:53.686Z"
+  "responseTime": 330,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:52.879Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 94.74.83.173:45069 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "94.74.83.173",
+  "portRemote": 45069,
+  "colo": "AMS",
+  "responseTime": 337,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:52.908Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 47.236.246.213:40389 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "47.236.246.213",
+  "portRemote": 40389,
+  "colo": "AMS",
+  "responseTime": 323,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:52.977Z"
 }
 STDERR: 
 Return Code: 0
@@ -473,7 +248,7 @@ STDOUT: {
   "colo": "AMS",
   "responseTime": 477,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.735Z"
+  "timestamp": "2025-10-06T04:07:53.268Z"
 }
 STDERR: 
 Return Code: 0
@@ -486,99 +261,144 @@ STDOUT: {
   "proxyIP": "129.226.196.206",
   "portRemote": 50654,
   "colo": "AMS",
-  "responseTime": 509,
+  "responseTime": 470,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.737Z"
+  "timestamp": "2025-10-06T04:07:53.314Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 8.219.126.137:491 ---
+--- 代理: 139.177.185.88:20205 ---
 检查结果:
 STDOUT: {
-  "success": true,
-  "proxyIP": "8.219.126.137",
-  "portRemote": 491,
+  "success": false,
+  "proxyIP": "139.177.185.88",
+  "portRemote": 20205,
   "colo": "AMS",
-  "responseTime": 324,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.831Z"
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:07:53.431Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 213.35.100.31:47112 ---
+--- 代理: 129.226.146.183:51220 ---
 检查结果:
 STDOUT: {
   "success": true,
-  "proxyIP": "213.35.100.31",
-  "portRemote": 47112,
-  "colo": "AMS",
-  "responseTime": 499,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:53.949Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 8.222.195.24:14706 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "8.222.195.24",
-  "portRemote": 14706,
-  "colo": "AMS",
-  "responseTime": 325,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.041Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 43.153.204.145:51050 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "43.153.204.145",
-  "portRemote": 51050,
+  "proxyIP": "129.226.146.183",
+  "portRemote": 51220,
   "colo": "AMS",
   "responseTime": 486,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.115Z"
+  "timestamp": "2025-10-06T04:07:53.454Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 103.112.185.138:587 ---
+--- 代理: 139.177.185.88:443 ---
 检查结果:
 STDOUT: {
-  "success": true,
-  "proxyIP": "103.112.185.138",
-  "portRemote": 587,
+  "success": false,
+  "proxyIP": "139.177.185.88",
+  "portRemote": 443,
   "colo": "AMS",
-  "responseTime": 380,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.145Z"
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:07:53.676Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 129.150.50.144:42956 ---
+--- 代理: 8.219.51.113:8443 ---
 检查结果:
 STDOUT: {
   "success": true,
-  "proxyIP": "129.150.50.144",
-  "portRemote": 42956,
+  "proxyIP": "8.219.51.113",
+  "portRemote": 8443,
   "colo": "AMS",
-  "responseTime": 507,
+  "responseTime": 353,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.175Z"
+  "timestamp": "2025-10-06T04:07:54.027Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 43.156.67.197:28443 ---
+检查结果:
+STDOUT: {
+  "success": false,
+  "proxyIP": "43.156.67.197",
+  "portRemote": 28443,
+  "colo": "AMS",
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:07:54.137Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 4.194.131.141:8081 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "4.194.131.141",
+  "portRemote": 8081,
+  "colo": "AMS",
+  "responseTime": 325,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:54.418Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 8.219.105.55:443 ---
+检查结果:
+STDOUT: {
+  "success": false,
+  "proxyIP": "8.219.105.55",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:07:54.427Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 51.79.158.58:2053 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "51.79.158.58",
+  "portRemote": 2053,
+  "colo": "AMS",
+  "responseTime": 329,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:54.497Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 146.70.29.27:20205 ---
+检查结果:
+STDOUT: {
+  "success": false,
+  "proxyIP": "146.70.29.27",
+  "portRemote": 20205,
+  "colo": "AMS",
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:07:54.722Z"
 }
 STDERR: 
 Return Code: 0
@@ -591,24 +411,99 @@ STDOUT: {
   "proxyIP": "43.134.8.58",
   "portRemote": 28443,
   "colo": "AMS",
-  "responseTime": 483,
+  "responseTime": 481,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.159Z"
+  "timestamp": "2025-10-06T04:07:54.740Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 138.2.111.60:60007 ---
+--- 代理: 168.138.171.70:23280 ---
 检查结果:
 STDOUT: {
   "success": true,
-  "proxyIP": "138.2.111.60",
-  "portRemote": 60007,
+  "proxyIP": "168.138.171.70",
+  "portRemote": 23280,
   "colo": "AMS",
-  "responseTime": 507,
+  "responseTime": 495,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.206Z"
+  "timestamp": "2025-10-06T04:07:55.226Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 139.177.185.196:20205 ---
+检查结果:
+STDOUT: {
+  "success": false,
+  "proxyIP": "139.177.185.196",
+  "portRemote": 20205,
+  "colo": "AMS",
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:07:55.263Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 129.150.50.144:42956 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "129.150.50.144",
+  "portRemote": 42956,
+  "colo": "AMS",
+  "responseTime": 494,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:55.380Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 47.236.71.6:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "47.236.71.6",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 330,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:55.546Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 91.192.81.154:2053 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "91.192.81.154",
+  "portRemote": 2053,
+  "colo": "AMS",
+  "responseTime": 321,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:55.969Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 8.219.54.136:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "8.219.54.136",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 349,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:56.055Z"
 }
 STDERR: 
 Return Code: 0
@@ -617,73 +512,73 @@ Return Code: 0
 --- 代理: 101.32.168.155:28443 ---
 检查结果:
 STDOUT: {
-  "success": true,
+  "success": false,
   "proxyIP": "101.32.168.155",
   "portRemote": 28443,
   "colo": "AMS",
-  "responseTime": 493,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.205Z"
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:07:56.280Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 146.235.19.79:28983 ---
+--- 代理: 8.222.162.205:443 ---
 检查结果:
 STDOUT: {
   "success": true,
-  "proxyIP": "146.235.19.79",
-  "portRemote": 28983,
+  "proxyIP": "8.222.162.205",
+  "portRemote": 443,
   "colo": "AMS",
-  "responseTime": 509,
+  "responseTime": 327,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.220Z"
+  "timestamp": "2025-10-06T04:07:56.348Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 43.167.237.199:20069 ---
+--- 代理: 8.219.214.30:443 ---
 检查结果:
 STDOUT: {
-  "success": true,
-  "proxyIP": "43.167.237.199",
-  "portRemote": 20069,
+  "success": false,
+  "proxyIP": "8.219.214.30",
+  "portRemote": 443,
   "colo": "AMS",
-  "responseTime": 499,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.249Z"
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:07:56.541Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 158.178.244.9:57459 ---
+--- 代理: 213.35.100.31:47112 ---
 检查结果:
 STDOUT: {
   "success": true,
-  "proxyIP": "158.178.244.9",
-  "portRemote": 57459,
+  "proxyIP": "213.35.100.31",
+  "portRemote": 47112,
   "colo": "AMS",
-  "responseTime": 491,
+  "responseTime": 472,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.229Z"
+  "timestamp": "2025-10-06T04:07:56.632Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 43.134.62.172:28443 ---
+--- 代理: 8.219.75.62:44810 ---
 检查结果:
 STDOUT: {
   "success": true,
-  "proxyIP": "43.134.62.172",
-  "portRemote": 28443,
+  "proxyIP": "8.219.75.62",
+  "portRemote": 44810,
   "colo": "AMS",
-  "responseTime": 485,
+  "responseTime": 326,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.282Z"
+  "timestamp": "2025-10-06T04:07:56.689Z"
 }
 STDERR: 
 Return Code: 0
@@ -696,264 +591,144 @@ STDOUT: {
   "proxyIP": "213.35.127.9",
   "portRemote": 17534,
   "colo": "AMS",
-  "responseTime": 485,
+  "responseTime": 482,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.296Z"
+  "timestamp": "2025-10-06T04:07:57.147Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 43.156.67.197:28443 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "43.156.67.197",
-  "portRemote": 28443,
-  "colo": "AMS",
-  "responseTime": 472,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.313Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 43.165.191.25:16837 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "43.165.191.25",
-  "portRemote": 16837,
-  "colo": "AMS",
-  "responseTime": 534,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.326Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 43.165.133.183:17628 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "43.165.133.183",
-  "portRemote": 17628,
-  "colo": "AMS",
-  "responseTime": 499,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.330Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 128.199.179.250:20205 ---
+--- 代理: 192.46.231.158:20205 ---
 检查结果:
 STDOUT: {
   "success": false,
-  "proxyIP": "128.199.179.250",
+  "proxyIP": "192.46.231.158",
   "portRemote": 20205,
   "colo": "AMS",
   "responseTime": -1,
   "message": "无法通过ProxyIP访问Cloudflare",
-  "timestamp": "2025-10-05T19:59:54.375Z"
+  "timestamp": "2025-10-06T04:07:57.392Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 64.235.61.162:7000 ---
+--- 代理: 45.127.34.182:441 ---
 检查结果:
 STDOUT: {
   "success": true,
-  "proxyIP": "64.235.61.162",
-  "portRemote": 7000,
+  "proxyIP": "45.127.34.182",
+  "portRemote": 441,
   "colo": "AMS",
-  "responseTime": 322,
+  "responseTime": 326,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.625Z"
+  "timestamp": "2025-10-06T04:07:57.509Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 13.212.19.68:56138 ---
+--- 代理: 8.219.205.100:443 ---
 检查结果:
 STDOUT: {
   "success": true,
-  "proxyIP": "13.212.19.68",
-  "portRemote": 56138,
+  "proxyIP": "8.219.205.100",
+  "portRemote": 443,
   "colo": "AMS",
-  "responseTime": 362,
+  "responseTime": 340,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.599Z"
+  "timestamp": "2025-10-06T04:07:57.564Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 128.199.128.28:123 ---
+--- 代理: 146.70.29.27:443 ---
 检查结果:
 STDOUT: {
-  "success": true,
-  "proxyIP": "128.199.128.28",
-  "portRemote": 123,
+  "success": false,
+  "proxyIP": "146.70.29.27",
+  "portRemote": 443,
   "colo": "AMS",
-  "responseTime": 327,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.752Z"
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:07:57.620Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 167.172.88.191:444 ---
+--- 代理: 103.195.188.66:22222 ---
 检查结果:
 STDOUT: {
   "success": true,
-  "proxyIP": "167.172.88.191",
-  "portRemote": 444,
+  "proxyIP": "103.195.188.66",
+  "portRemote": 22222,
   "colo": "AMS",
-  "responseTime": 348,
+  "responseTime": 329,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.760Z"
+  "timestamp": "2025-10-06T04:07:57.825Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 167.172.88.191:993 ---
+--- 代理: 139.177.185.196:443 ---
 检查结果:
 STDOUT: {
-  "success": true,
-  "proxyIP": "167.172.88.191",
-  "portRemote": 993,
+  "success": false,
+  "proxyIP": "139.177.185.196",
+  "portRemote": 443,
   "colo": "AMS",
-  "responseTime": 348,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.739Z"
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:07:57.870Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 5.34.176.119:81 ---
+--- 代理: 152.69.216.238:14339 ---
 检查结果:
 STDOUT: {
   "success": true,
-  "proxyIP": "5.34.176.119",
-  "portRemote": 81,
+  "proxyIP": "152.69.216.238",
+  "portRemote": 14339,
   "colo": "AMS",
-  "responseTime": 356,
+  "responseTime": 472,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.757Z"
+  "timestamp": "2025-10-06T04:07:57.912Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 94.74.83.173:45069 ---
+--- 代理: 54.169.244.194:8443 ---
 检查结果:
 STDOUT: {
   "success": true,
-  "proxyIP": "94.74.83.173",
-  "portRemote": 45069,
+  "proxyIP": "54.169.244.194",
+  "portRemote": 8443,
   "colo": "AMS",
-  "responseTime": 325,
+  "responseTime": 357,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.817Z"
+  "timestamp": "2025-10-06T04:07:58.125Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 54.255.217.120:8192 ---
+--- 代理: 45.77.47.155:20205 ---
 检查结果:
 STDOUT: {
-  "success": true,
-  "proxyIP": "54.255.217.120",
-  "portRemote": 8192,
+  "success": false,
+  "proxyIP": "45.77.47.155",
+  "portRemote": 20205,
   "colo": "AMS",
-  "responseTime": 350,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.868Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 139.162.8.21:444 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "139.162.8.21",
-  "portRemote": 444,
-  "colo": "AMS",
-  "responseTime": 324,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.913Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 213.35.110.208:12569 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "213.35.110.208",
-  "portRemote": 12569,
-  "colo": "AMS",
-  "responseTime": 482,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.928Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 43.100.115.96:12142 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "43.100.115.96",
-  "portRemote": 12142,
-  "colo": "AMS",
-  "responseTime": 395,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:54.965Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 138.2.89.64:32962 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "138.2.89.64",
-  "portRemote": 32962,
-  "colo": "AMS",
-  "responseTime": 496,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:55.022Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 138.2.69.236:23334 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "138.2.69.236",
-  "portRemote": 23334,
-  "colo": "AMS",
-  "responseTime": 479,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:55.074Z"
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:07:58.432Z"
 }
 STDERR: 
 Return Code: 0
@@ -966,39 +741,219 @@ STDOUT: {
   "proxyIP": "138.2.71.48",
   "portRemote": 48397,
   "colo": "AMS",
+  "responseTime": 520,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:58.937Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 54.255.217.120:8192 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "54.255.217.120",
+  "portRemote": 8192,
+  "colo": "AMS",
+  "responseTime": 319,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:59.060Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 146.235.19.79:28983 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "146.235.19.79",
+  "portRemote": 28983,
+  "colo": "AMS",
+  "responseTime": 475,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:59.324Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 8.222.161.217:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "8.222.161.217",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 327,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:59.511Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 45.77.47.155:74 ---
+检查结果:
+STDOUT: {
+  "success": false,
+  "proxyIP": "45.77.47.155",
+  "portRemote": 74,
+  "colo": "AMS",
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:07:59.388Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 43.153.204.145:51050 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "43.153.204.145",
+  "portRemote": 51050,
+  "colo": "AMS",
+  "responseTime": 488,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:59.636Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 138.2.111.60:60007 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "138.2.111.60",
+  "portRemote": 60007,
+  "colo": "AMS",
+  "responseTime": 482,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:59.716Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 43.134.99.72:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "43.134.99.72",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 484,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:07:59.838Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 64.235.61.162:7000 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "64.235.61.162",
+  "portRemote": 7000,
+  "colo": "AMS",
+  "responseTime": 324,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:00.477Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: -1:-1 ---
+检查结果:
+STDOUT: {
+  "success": false,
+  "proxyIP": -1,
+  "portRemote": -1,
+  "colo": "AMS",
+  "responseTime": -1,
+  "message": "Cannot call releaseLock() on a reader with outstanding read promises.",
+  "timestamp": "2025-10-06T04:08:00.494Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 47.130.35.116:8888 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "47.130.35.116",
+  "portRemote": 8888,
+  "colo": "AMS",
+  "responseTime": 328,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:00.583Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 64.235.43.213:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "64.235.43.213",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 465,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:00.731Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 8.219.198.241:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "8.219.198.241",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 324,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:01.066Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 64.235.43.213:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "64.235.43.213",
+  "portRemote": 443,
+  "colo": "AMS",
   "responseTime": 491,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:55.071Z"
+  "timestamp": "2025-10-06T04:08:01.221Z"
 }
 STDERR: 
 Return Code: 0
 
 
---- 代理: 43.165.133.183:30058 ---
+--- 代理: 139.162.8.21:444 ---
 检查结果:
 STDOUT: {
   "success": true,
-  "proxyIP": "43.165.133.183",
-  "portRemote": 30058,
+  "proxyIP": "139.162.8.21",
+  "portRemote": 444,
   "colo": "AMS",
-  "responseTime": 505,
+  "responseTime": 325,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:55.160Z"
-}
-STDERR: 
-Return Code: 0
-
-
---- 代理: 129.150.32.171:6443 ---
-检查结果:
-STDOUT: {
-  "success": true,
-  "proxyIP": "129.150.32.171",
-  "portRemote": 6443,
-  "colo": "AMS",
-  "responseTime": 526,
-  "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:55.240Z"
+  "timestamp": "2025-10-06T04:08:01.263Z"
 }
 STDERR: 
 Return Code: 0
@@ -1011,9 +966,714 @@ STDOUT: {
   "proxyIP": "43.128.95.110",
   "portRemote": 40029,
   "colo": "AMS",
-  "responseTime": 515,
+  "responseTime": 511,
   "message": "第1次验证有效ProxyIP",
-  "timestamp": "2025-10-05T19:59:55.666Z"
+  "timestamp": "2025-10-06T04:08:01.468Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 168.138.165.174:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "168.138.165.174",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 473,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:01.467Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 158.178.224.184:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "158.178.224.184",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 480,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:01.477Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 20.205.177.152:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "20.205.177.152",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 338,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:01.963Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 31.192.238.71:8443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "31.192.238.71",
+  "portRemote": 8443,
+  "colo": "AMS",
+  "responseTime": 329,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:01.982Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 150.109.94.198:58088 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "150.109.94.198",
+  "portRemote": 58088,
+  "colo": "AMS",
+  "responseTime": 470,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:02.378Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 158.178.244.9:57459 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "158.178.244.9",
+  "portRemote": 57459,
+  "colo": "AMS",
+  "responseTime": 469,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:02.508Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 31.192.238.71:2053 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "31.192.238.71",
+  "portRemote": 2053,
+  "colo": "AMS",
+  "responseTime": 323,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:02.614Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 194.36.179.17:8443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "194.36.179.17",
+  "portRemote": 8443,
+  "colo": "AMS",
+  "responseTime": 345,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:02.851Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 194.36.179.5:2053 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "194.36.179.5",
+  "portRemote": 2053,
+  "colo": "AMS",
+  "responseTime": 345,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:02.932Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 8.219.126.137:491 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "8.219.126.137",
+  "portRemote": 491,
+  "colo": "AMS",
+  "responseTime": 327,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:03.086Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 8.222.195.24:14706 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "8.222.195.24",
+  "portRemote": 14706,
+  "colo": "AMS",
+  "responseTime": 328,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:03.123Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 64.235.45.169:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "64.235.45.169",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 512,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:03.955Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 64.235.45.169:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "64.235.45.169",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 497,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:03.945Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 96.9.211.152:8443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "96.9.211.152",
+  "portRemote": 8443,
+  "colo": "AMS",
+  "responseTime": 334,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:03.966Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 8.219.56.26:40011 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "8.219.56.26",
+  "portRemote": 40011,
+  "colo": "AMS",
+  "responseTime": 339,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:04.124Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 8.219.143.30:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "8.219.143.30",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 318,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:04.120Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 103.131.191.170:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "103.131.191.170",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 337,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:04.470Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 203.118.29.129:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "203.118.29.129",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 1835,
+  "message": "第2次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:04.674Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 213.35.110.208:12569 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "213.35.110.208",
+  "portRemote": 12569,
+  "colo": "AMS",
+  "responseTime": 473,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:04.736Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 5.34.176.119:81 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "5.34.176.119",
+  "portRemote": 81,
+  "colo": "AMS",
+  "responseTime": 338,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:04.732Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 194.36.179.17:2053 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "194.36.179.17",
+  "portRemote": 2053,
+  "colo": "AMS",
+  "responseTime": 361,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:04.747Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 146.190.103.136:443 ---
+检查结果:
+STDOUT: {
+  "success": false,
+  "proxyIP": "146.190.103.136",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:08:04.986Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 165.22.250.198:443 ---
+检查结果:
+STDOUT: {
+  "success": false,
+  "proxyIP": "165.22.250.198",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:08:05.345Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 54.255.174.120:8443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "54.255.174.120",
+  "portRemote": 8443,
+  "colo": "AMS",
+  "responseTime": 328,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:05.515Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 104.43.91.171:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "104.43.91.171",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 330,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:05.576Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 18.143.66.189:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "18.143.66.189",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 326,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:05.620Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 68.183.232.113:443 ---
+检查结果:
+STDOUT: {
+  "success": false,
+  "proxyIP": "68.183.232.113",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:08:05.735Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 34.124.206.71:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "34.124.206.71",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 326,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:06.034Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 139.162.9.101:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "139.162.9.101",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 320,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:06.279Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 139.162.42.205:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "139.162.42.205",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 412,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:06.420Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 172.104.57.110:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "172.104.57.110",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 341,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:06.728Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 129.150.32.171:6443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "129.150.32.171",
+  "portRemote": 6443,
+  "colo": "AMS",
+  "responseTime": 521,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:06.724Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 178.128.117.43:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "178.128.117.43",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 324,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:07.055Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 213.35.104.111:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "213.35.104.111",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 511,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:07.316Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 168.138.177.109:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "168.138.177.109",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 488,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:07.437Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 128.199.128.28:123 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "128.199.128.28",
+  "portRemote": 123,
+  "colo": "AMS",
+  "responseTime": 355,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:07.471Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 168.138.171.191:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "168.138.171.191",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 490,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:07.494Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 128.199.75.32:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "128.199.75.32",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 334,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:07.605Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 167.172.88.191:993 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "167.172.88.191",
+  "portRemote": 993,
+  "colo": "AMS",
+  "responseTime": 328,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:07.880Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 157.230.33.67:8443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "157.230.33.67",
+  "portRemote": 8443,
+  "colo": "AMS",
+  "responseTime": 358,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:07.887Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 139.177.185.196:74 ---
+检查结果:
+STDOUT: {
+  "success": false,
+  "proxyIP": "139.177.185.196",
+  "portRemote": 74,
+  "colo": "AMS",
+  "responseTime": -1,
+  "message": "无法通过ProxyIP访问Cloudflare",
+  "timestamp": "2025-10-06T04:08:07.827Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 159.223.68.162:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "159.223.68.162",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 353,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:08.313Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 47.236.29.162:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "47.236.29.162",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 330,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:08.487Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 143.198.196.196:8443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "143.198.196.196",
+  "portRemote": 8443,
+  "colo": "AMS",
+  "responseTime": 327,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:08.963Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 47.130.116.139:443 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "47.130.116.139",
+  "portRemote": 443,
+  "colo": "AMS",
+  "responseTime": 345,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:08.995Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 143.198.196.196:2053 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "143.198.196.196",
+  "portRemote": 2053,
+  "colo": "AMS",
+  "responseTime": 370,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:09.079Z"
+}
+STDERR: 
+Return Code: 0
+
+
+--- 代理: 138.2.89.64:32962 ---
+检查结果:
+STDOUT: {
+  "success": true,
+  "proxyIP": "138.2.89.64",
+  "portRemote": 32962,
+  "colo": "AMS",
+  "responseTime": 494,
+  "message": "第1次验证有效ProxyIP",
+  "timestamp": "2025-10-06T04:08:11.278Z"
 }
 STDERR: 
 Return Code: 0

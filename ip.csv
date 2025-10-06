@@ -1,69 +1,303 @@
 IP地址,端口,TLS,数据中心,源IP位置,地区,城市,地区(中文),国家,城市(中文),国旗,网络延迟,下载速度
-13.212.19.68,56138,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,53 ms,17570 kB/s
-103.192.178.50,33438,true,HKG,HK,Asia Pacific,Hong Kong,亚洲,香港,香港,🇭🇰,44 ms,15089 kB/s
-185.223.207.115,5443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,124 ms,11919 kB/s
-83.229.123.194,35134,true,HKG,HK,Asia Pacific,Hong Kong,亚洲,香港,香港,🇭🇰,70 ms,10802 kB/s
-47.130.35.116,8888,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,51 ms,10145 kB/s
-47.236.71.60,28443,true,NRT,SG,Asia Pacific,Tokyo,亚洲,日本,东京,🇯🇵,189 ms,8478 kB/s
-8.219.243.83,18377,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,211 ms,7150 kB/s
-8.219.88.178,51898,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,182 ms,6915 kB/s
-8.219.243.43,10000,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,195 ms,6282 kB/s
-4.194.131.141,8081,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,54 ms,5865 kB/s
-45.127.34.182,441,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,229 ms,5564 kB/s
-139.177.185.196,20205,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,236 ms,5267 kB/s
-139.177.185.88,74,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,231 ms,5242 kB/s
-139.177.185.196,74,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,235 ms,5199 kB/s
-111.119.200.18,57316,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,50 ms,5195 kB/s
-166.108.239.108,3389,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,47 ms,5007 kB/s
-192.46.231.158,20205,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,229 ms,4955 kB/s
-43.165.190.101,25891,true,NRT,JP,Asia Pacific,Tokyo,亚洲,日本,东京,🇯🇵,129 ms,4885 kB/s
-192.46.231.158,74,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,233 ms,4286 kB/s
-146.70.29.27,20205,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,267 ms,3758 kB/s
-129.226.146.183,51220,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,44 ms,3572 kB/s
-47.236.173.242,29887,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,194 ms,3535 kB/s
-8.219.75.62,44810,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,188 ms,3480 kB/s
-103.195.188.66,22222,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,225 ms,3472 kB/s
-47.236.246.213,40389,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,202 ms,3440 kB/s
-129.226.196.206,50654,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,64 ms,3413 kB/s
-43.163.6.142,30316,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,56 ms,3295 kB/s
-168.138.171.70,23280,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,345 ms,3226 kB/s
-8.219.56.26,40011,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,227 ms,3157 kB/s
-213.35.100.31,47112,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,339 ms,2971 kB/s
-43.100.21.205,20027,true,HKG,HK,Asia Pacific,Hong Kong,亚洲,香港,香港,🇭🇰,18 ms,2796 kB/s
-8.219.59.132,48130,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,211 ms,2762 kB/s
-103.112.185.138,587,true,HKG,HK,Asia Pacific,Hong Kong,亚洲,香港,香港,🇭🇰,15 ms,2609 kB/s
-8.222.195.24,14706,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,194 ms,2535 kB/s
-43.167.237.199,20069,true,NRT,JP,Asia Pacific,Tokyo,亚洲,日本,东京,🇯🇵,173 ms,2477 kB/s
-43.128.95.110,40029,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,57 ms,2399 kB/s
-43.134.62.172,28443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,59 ms,2384 kB/s
-43.156.67.197,28443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,53 ms,2330 kB/s
-43.134.8.58,28443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,56 ms,2330 kB/s
-213.35.127.9,17534,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,340 ms,2321 kB/s
-45.77.47.155,20205,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,359 ms,2276 kB/s
-146.235.19.79,28983,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,338 ms,2266 kB/s
-8.219.126.137,491,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,215 ms,1799 kB/s
-43.153.201.129,666,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,48 ms,1623 kB/s
-45.77.47.155,74,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,330 ms,1597 kB/s
-101.32.168.155,28443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,51 ms,1552 kB/s
-138.2.111.60,60007,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,359 ms,1525 kB/s
-43.153.204.145,51050,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,51 ms,1463 kB/s
-43.165.133.183,17628,true,NRT,JP,Asia Pacific,Tokyo,亚洲,日本,东京,🇯🇵,169 ms,1419 kB/s
-139.162.8.21,444,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,234 ms,1332 kB/s
-43.165.191.25,16837,true,NRT,JP,Asia Pacific,Tokyo,亚洲,日本,东京,🇯🇵,175 ms,1262 kB/s
-129.150.50.144,42956,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,333 ms,1179 kB/s
-158.178.244.9,57459,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,333 ms,1104 kB/s
-138.2.69.236,23334,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,325 ms,993 kB/s
-138.2.71.48,48397,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,327 ms,986 kB/s
-94.74.83.173,45069,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,50 ms,718 kB/s
-54.255.217.120,8192,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,49 ms,598 kB/s
-43.165.133.183,30058,true,NRT,JP,Asia Pacific,Tokyo,亚洲,日本,东京,🇯🇵,170 ms,490 kB/s
-213.35.110.208,12569,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,337 ms,272 kB/s
-64.235.61.162,7000,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,345 ms,253 kB/s
-5.34.176.119,81,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,395 ms,195 kB/s
-138.2.89.64,32962,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,330 ms,156 kB/s
-167.172.88.191,993,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,161 ms,62 kB/s
-128.199.179.250,20205,true,FRA,DE,Europe,Frankfurt,欧洲,德国,法兰克福,🇩🇪,145 ms,45 kB/s
-129.150.32.171,6443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,349 ms,0 kB/s
-167.172.88.191,444,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,146 ms,0 kB/s
-43.100.115.96,12142,true,HKG,HK,Asia Pacific,Hong Kong,亚洲,香港,香港,🇭🇰,12 ms,0 kB/s
-128.199.128.28,123,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,150 ms,0 kB/s
+13.212.19.68,56138,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,51 ms,16375 kB/s
+206.238.238.248,2083,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,152 ms,14125 kB/s
+103.192.178.50,33438,true,HKG,HK,Asia Pacific,Hong Kong,亚洲,香港,香港,🇭🇰,46 ms,12050 kB/s
+206.238.238.247,2087,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,147 ms,10162 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,154 ms,9302 kB/s
+83.229.123.194,35134,true,HKG,HK,Asia Pacific,Hong Kong,亚洲,香港,香港,🇭🇰,77 ms,9149 kB/s
+43.165.190.101,25891,true,NRT,JP,Asia Pacific,Tokyo,亚洲,日本,东京,🇯🇵,188 ms,9044 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,165 ms,8245 kB/s
+8.219.88.178,51898,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,212 ms,8141 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,151 ms,7769 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,154 ms,6902 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,154 ms,6821 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,166 ms,6797 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,173 ms,6581 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,153 ms,6455 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,152 ms,6323 kB/s
+139.177.185.88,74,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,236 ms,5999 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,154 ms,5896 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,172 ms,5839 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,147 ms,5634 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,167 ms,5422 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,152 ms,5320 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,160 ms,5270 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,151 ms,5186 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,187 ms,5118 kB/s
+41.216.182.98,443,true,ARN,SE,Europe,Stockholm,欧洲,瑞典,斯德哥尔摩,🇸🇪,246 ms,5062 kB/s
+185.223.207.115,5443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,126 ms,5039 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,174 ms,5028 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,180 ms,5017 kB/s
+47.236.185.184,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,193 ms,4925 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,158 ms,4888 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,209 ms,4878 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,162 ms,4665 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,151 ms,4650 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,148 ms,4644 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,155 ms,4609 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,195 ms,4557 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,155 ms,4543 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,156 ms,4360 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,157 ms,4360 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,160 ms,4340 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,245 ms,4323 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,168 ms,4206 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,174 ms,4158 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,155 ms,4122 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,158 ms,4068 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,153 ms,4044 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,154 ms,3930 kB/s
+8.219.243.43,10000,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,208 ms,3904 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,158 ms,3876 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,183 ms,3827 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,186 ms,3806 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,170 ms,3799 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,160 ms,3794 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,156 ms,3783 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,164 ms,3783 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,157 ms,3776 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,171 ms,3766 kB/s
+95.111.206.88,8443,true,ARN,SE,Europe,Stockholm,欧洲,瑞典,斯德哥尔摩,🇸🇪,285 ms,3752 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,154 ms,3747 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,190 ms,3740 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,151 ms,3726 kB/s
+111.119.200.18,57316,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,50 ms,3722 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,151 ms,3719 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,153 ms,3662 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,160 ms,3655 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,171 ms,3629 kB/s
+47.236.180.90,8443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,196 ms,3621 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,166 ms,3595 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,157 ms,3525 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,163 ms,3486 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,167 ms,3471 kB/s
+8.219.243.83,18377,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,197 ms,3455 kB/s
+166.108.239.108,3389,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,45 ms,3423 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,175 ms,3397 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,177 ms,3380 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,233 ms,3362 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,155 ms,3356 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,165 ms,3352 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,152 ms,3279 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,173 ms,3272 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,157 ms,3267 kB/s
+47.236.71.60,28443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,205 ms,3265 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,155 ms,3250 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,166 ms,3243 kB/s
+47.236.246.213,40389,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,195 ms,3242 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,152 ms,3241 kB/s
+192.46.231.158,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,230 ms,3233 kB/s
+129.226.146.183,51220,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,48 ms,3205 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,166 ms,3180 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,160 ms,3135 kB/s
+47.236.173.242,29887,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,188 ms,3121 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,161 ms,3091 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,159 ms,3067 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,161 ms,3060 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,165 ms,3051 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,255 ms,3032 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,207 ms,2976 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,155 ms,2922 kB/s
+8.219.59.132,48130,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,216 ms,2895 kB/s
+43.100.21.205,20027,true,HKG,HK,Asia Pacific,Hong Kong,亚洲,香港,香港,🇭🇰,10 ms,2892 kB/s
+129.226.196.206,50654,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,49 ms,2879 kB/s
+94.74.83.173,45069,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,47 ms,2822 kB/s
+43.163.6.142,30316,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,51 ms,2810 kB/s
+139.177.185.88,20205,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,232 ms,2807 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,168 ms,2790 kB/s
+8.219.51.113,8443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,196 ms,2762 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,180 ms,2756 kB/s
+43.165.133.183,17628,true,NRT,JP,Asia Pacific,Tokyo,亚洲,日本,东京,🇯🇵,117 ms,2691 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,171 ms,2603 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,162 ms,2587 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,169 ms,2571 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,172 ms,2562 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,215 ms,2560 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,161 ms,2558 kB/s
+103.112.185.138,587,true,HKG,HK,Asia Pacific,Hong Kong,亚洲,香港,香港,🇭🇰,18 ms,2544 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,157 ms,2543 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,164 ms,2541 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,197 ms,2506 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,167 ms,2460 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,167 ms,2435 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,164 ms,2425 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,190 ms,2414 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,155 ms,2394 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,170 ms,2381 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,155 ms,2379 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,158 ms,2357 kB/s
+139.177.185.88,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,246 ms,2352 kB/s
+43.156.67.197,28443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,58 ms,2325 kB/s
+4.194.131.141,8081,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,50 ms,2282 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,174 ms,2278 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,160 ms,2275 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,151 ms,2246 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,173 ms,2215 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,161 ms,2211 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,174 ms,2151 kB/s
+43.134.8.58,28443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,50 ms,2151 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,151 ms,2141 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,168 ms,2125 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,154 ms,2119 kB/s
+51.79.158.58,2053,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,243 ms,2114 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,156 ms,2113 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,162 ms,2093 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,154 ms,2092 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,168 ms,2067 kB/s
+168.138.171.70,23280,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,339 ms,2039 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,160 ms,1994 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,162 ms,1985 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,150 ms,1982 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,185 ms,1908 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,215 ms,1883 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,157 ms,1880 kB/s
+8.219.105.55,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,190 ms,1877 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,152 ms,1876 kB/s
+129.150.50.144,42956,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,338 ms,1850 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,159 ms,1833 kB/s
+101.32.168.155,28443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,51 ms,1822 kB/s
+146.70.29.27,20205,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,274 ms,1815 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,153 ms,1801 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,192 ms,1789 kB/s
+47.236.71.6,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,200 ms,1759 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,152 ms,1758 kB/s
+139.177.185.196,20205,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,260 ms,1758 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,155 ms,1744 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,159 ms,1743 kB/s
+91.192.81.154,2053,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,350 ms,1687 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,168 ms,1645 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,157 ms,1614 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,159 ms,1585 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,199 ms,1572 kB/s
+8.219.54.136,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,198 ms,1566 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,252 ms,1547 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,149 ms,1537 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,159 ms,1522 kB/s
+139.162.8.21,993,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,228 ms,1512 kB/s
+213.35.100.31,47112,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,329 ms,1506 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,173 ms,1431 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,196 ms,1399 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,160 ms,1396 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,191 ms,1319 kB/s
+8.222.162.205,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,194 ms,1318 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,196 ms,1312 kB/s
+8.219.214.30,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,181 ms,1293 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,159 ms,1251 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,183 ms,1246 kB/s
+8.219.75.62,44810,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,191 ms,1246 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,206 ms,1228 kB/s
+213.35.127.9,17534,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,331 ms,1226 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,154 ms,1222 kB/s
+152.69.216.238,14339,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,331 ms,1204 kB/s
+45.127.34.182,441,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,225 ms,1200 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,157 ms,1196 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,164 ms,1169 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,157 ms,1167 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,167 ms,1112 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,161 ms,1046 kB/s
+8.219.205.100,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,191 ms,1025 kB/s
+206.238.239.248,2096,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,155 ms,1024 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,187 ms,1000 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,160 ms,980 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,159 ms,950 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,152 ms,913 kB/s
+41.216.182.6,8443,true,ARN,SE,Europe,Stockholm,欧洲,瑞典,斯德哥尔摩,🇸🇪,266 ms,896 kB/s
+41.216.182.139,443,true,ARN,SE,Europe,Stockholm,欧洲,瑞典,斯德哥尔摩,🇸🇪,247 ms,857 kB/s
+103.195.188.66,22222,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,227 ms,824 kB/s
+206.238.239.251,2096,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,154 ms,823 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,155 ms,807 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,156 ms,798 kB/s
+206.238.238.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,159 ms,772 kB/s
+192.46.231.158,20205,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,228 ms,758 kB/s
+54.169.244.194,8443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,73 ms,726 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,156 ms,650 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,159 ms,640 kB/s
+146.70.29.27,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,244 ms,627 kB/s
+139.177.185.196,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,236 ms,624 kB/s
+138.2.71.48,48397,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,353 ms,611 kB/s
+45.77.47.155,20205,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,380 ms,596 kB/s
+64.235.61.162,7000,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,353 ms,589 kB/s
+206.238.239.249,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,153 ms,582 kB/s
+41.216.182.246,8443,true,ARN,SE,Europe,Stockholm,欧洲,瑞典,斯德哥尔摩,🇸🇪,246 ms,554 kB/s
+146.235.19.79,28983,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,339 ms,548 kB/s
+41.216.182.106,8443,true,ARN,SE,Europe,Stockholm,欧洲,瑞典,斯德哥尔摩,🇸🇪,234 ms,528 kB/s
+54.255.217.120,8192,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,51 ms,477 kB/s
+43.134.99.72,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,54 ms,464 kB/s
+157.254.167.107,443,true,IAD,US,North America,Ashburn,北美洲,美国,阿什本,🇺🇸,232 ms,439 kB/s
+43.165.133.183,30058,true,NRT,JP,Asia Pacific,Tokyo,亚洲,日本,东京,🇯🇵,116 ms,437 kB/s
+43.153.204.145,51050,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,49 ms,416 kB/s
+138.2.111.60,60007,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,347 ms,402 kB/s
+8.222.161.217,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,199 ms,402 kB/s
+45.77.47.155,74,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,368 ms,391 kB/s
+47.130.35.116,8888,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,51 ms,374 kB/s
+64.235.43.213,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,360 ms,366 kB/s
+64.235.43.213,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,353 ms,359 kB/s
+41.216.182.105,443,true,ARN,SE,Europe,Stockholm,欧洲,瑞典,斯德哥尔摩,🇸🇪,218 ms,339 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,185 ms,314 kB/s
+168.138.165.174,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,337 ms,306 kB/s
+43.128.95.110,40029,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,65 ms,299 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,201 ms,288 kB/s
+8.219.198.241,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,199 ms,285 kB/s
+158.178.224.184,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,324 ms,272 kB/s
+139.162.8.21,444,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,247 ms,262 kB/s
+20.205.177.152,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,90 ms,250 kB/s
+31.192.238.71,8443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,335 ms,249 kB/s
+43.165.191.25,16837,true,NRT,JP,Asia Pacific,Tokyo,亚洲,日本,东京,🇯🇵,174 ms,246 kB/s
+150.109.94.198,58088,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,49 ms,236 kB/s
+158.178.244.9,57459,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,329 ms,233 kB/s
+31.192.238.71,2053,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,330 ms,228 kB/s
+194.36.179.5,2053,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,341 ms,217 kB/s
+194.36.179.17,8443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,333 ms,186 kB/s
+203.118.29.129,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,246 ms,177 kB/s
+8.222.195.24,14706,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,204 ms,147 kB/s
+8.219.126.137,491,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,198 ms,126 kB/s
+64.235.45.169,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,344 ms,125 kB/s
+64.235.45.169,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,358 ms,99 kB/s
+96.9.211.152,8443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,337 ms,88 kB/s
+8.219.56.26,40011,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,199 ms,61 kB/s
+8.219.143.30,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,201 ms,52 kB/s
+213.35.110.208,12569,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,332 ms,41 kB/s
+103.131.191.170,443,true,SIN,MY,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,355 ms,40 kB/s
+194.36.179.17,2053,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,344 ms,27 kB/s
+41.216.182.225,443,true,ARN,SE,Europe,Stockholm,欧洲,瑞典,斯德哥尔摩,🇸🇪,225 ms,24 kB/s
+5.34.176.119,81,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,371 ms,23 kB/s
+146.190.103.136,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,150 ms,4 kB/s
+54.255.174.120,8443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,51 ms,1 kB/s
+104.43.91.171,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,62 ms,1 kB/s
+18.143.66.189,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,49 ms,1 kB/s
+165.22.250.198,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,174 ms,0 kB/s
+34.124.206.71,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,59 ms,0 kB/s
+68.183.232.113,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,149 ms,0 kB/s
+139.162.42.205,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,236 ms,0 kB/s
+139.162.9.101,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,234 ms,0 kB/s
+129.150.32.171,6443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,337 ms,0 kB/s
+172.104.57.110,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,235 ms,0 kB/s
+168.138.177.109,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,373 ms,0 kB/s
+168.138.171.191,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,356 ms,0 kB/s
+213.35.104.111,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,348 ms,0 kB/s
+64.120.92.238,443,true,HKG,SG,Asia Pacific,Hong Kong,亚洲,香港,香港,🇭🇰,420 ms,0 kB/s
+173.234.15.93,443,true,HKG,SG,Asia Pacific,Hong Kong,亚洲,香港,香港,🇭🇰,372 ms,0 kB/s
+178.128.117.43,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,158 ms,0 kB/s
+128.199.179.250,443,true,FRA,DE,Europe,Frankfurt,欧洲,德国,法兰克福,🇩🇪,154 ms,0 kB/s
+43.100.115.96,12142,true,HKG,HK,Asia Pacific,Hong Kong,亚洲,香港,香港,🇭🇰,13 ms,0 kB/s
+128.199.128.28,123,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,153 ms,0 kB/s
+128.199.75.32,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,152 ms,0 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,159 ms,0 kB/s
+157.230.33.67,8443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,151 ms,0 kB/s
+167.172.88.191,993,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,154 ms,0 kB/s
+139.177.185.196,74,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,227 ms,0 kB/s
+43.167.237.199,20069,true,NRT,JP,Asia Pacific,Tokyo,亚洲,日本,东京,🇯🇵,92 ms,0 kB/s
+159.223.68.162,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,159 ms,0 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,158 ms,0 kB/s
+47.236.29.162,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,191 ms,0 kB/s
+206.238.238.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,155 ms,0 kB/s
+47.130.116.139,443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,68 ms,0 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,169 ms,0 kB/s
+206.238.238.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,163 ms,0 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,169 ms,0 kB/s
+138.2.89.64,32962,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,336 ms,0 kB/s
+143.198.196.196,2053,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,156 ms,0 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,168 ms,0 kB/s
+206.238.239.247,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,164 ms,0 kB/s
+143.198.196.196,8443,true,SIN,SG,Asia Pacific,Singapore,亚洲,新加坡,新加坡,🇸🇬,145 ms,0 kB/s
+206.238.239.248,443,true,SJC,CN,North America,San Jose,北美洲,美国,圣何塞,🇺🇸,153 ms,0 kB/s
