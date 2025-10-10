@@ -20,7 +20,7 @@ PREFERRED_PROXY_FILE = '优选反代.txt'  # 优选代理保存文件
 # 配置变量 - 用户可以修改这些值
 PREFERRED_COUNTRY = '新加坡'  # 优选国家，如果为空则提取所有国家IP，例如: '新加坡'
 PREFERRED_MAX_RESPONSE_TIME = 350  # 优选反代的最大响应时间阈值（毫秒）
-PREFERRED_PROXY_PORT = '443'  # 优选反代端口，如果为空则不进行端口筛选，例如: '443' 或 '80,443,2053'
+PREFERRED_PROXY_PORT = ''  # 优选反代端口，如果为空则不进行端口筛选，例如: '443' 或 '80,443,2053'
 
 # CF标准端口列表（基于Cloudflare支持的HTTP/HTTPS端口）
 STANDARD_PORTS = {
@@ -136,7 +136,7 @@ if not os.path.exists(PROXY_FILE):
 print("正在执行 ./iptest 命令...")
 try:
     # 修改这里：实时显示执行过程
-    process = subprocess.Popen(['./iptest'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1, universal_newlines=True)
+    process = subprocess.Popen(['./iptest', '-tls=true'], stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, bufsize=1, universal_newlines=True)
     
     # 实时读取并显示输出
     print("=" * 50)
