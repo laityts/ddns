@@ -1,4 +1,4 @@
 IP地址,端口,TLS,数据中心,源IP位置,地区,城市,地区(中文),国家,城市(中文),国旗,网络延迟,下载速度
-220.130.58.230,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,41 ms,3174 kB/s
-125.228.236.138,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,39 ms,1131 kB/s
-114.33.57.170,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,31 ms,781 kB/s
+125.228.236.138,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,46 ms,0 kB/s
+1.162.82.44,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,57 ms,0 kB/s
+114.33.57.170,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,119 ms,0 kB/s
