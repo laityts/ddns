@@ -1,14 +1,43 @@
 IP地址,端口,TLS,数据中心,源IP位置,地区,城市,地区(中文),国家,城市(中文),国旗,网络延迟,下载速度
-59.24.1.109,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,94 ms,0 kB/s
-175.208.111.195,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,88 ms,0 kB/s
-61.81.124.34,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,99 ms,0 kB/s
-211.248.217.7,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,106 ms,0 kB/s
-112.186.189.42,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,91 ms,0 kB/s
-175.208.111.195,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,77 ms,0 kB/s
-218.154.136.101,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,105 ms,0 kB/s
-112.169.198.92,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,113 ms,0 kB/s
-14.55.153.119,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,113 ms,0 kB/s
-220.127.68.28,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,113 ms,0 kB/s
-112.166.95.230,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,111 ms,0 kB/s
-121.179.68.136,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,106 ms,0 kB/s
-119.194.243.226,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,113 ms,0 kB/s
+59.6.239.208,10202,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,116 ms,0 kB/s
+59.6.239.208,16045,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,108 ms,0 kB/s
+121.183.151.131,10298,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,106 ms,0 kB/s
+59.6.239.208,32788,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,116 ms,0 kB/s
+220.118.83.101,60004,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,97 ms,0 kB/s
+59.6.239.208,14897,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,107 ms,0 kB/s
+221.160.44.4,10162,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,130 ms,0 kB/s
+203.229.146.250,30029,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,98 ms,0 kB/s
+121.178.83.161,32409,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,115 ms,0 kB/s
+221.147.196.150,18810,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,112 ms,0 kB/s
+14.43.108.144,12235,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,101 ms,0 kB/s
+210.100.138.35,12443,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,109 ms,0 kB/s
+211.184.99.67,10389,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,114 ms,0 kB/s
+175.208.111.195,50001,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,106 ms,0 kB/s
+14.33.140.80,30017,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,107 ms,0 kB/s
+59.6.239.208,10227,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,111 ms,0 kB/s
+211.196.115.195,10030,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,126 ms,0 kB/s
+121.180.172.11,11002,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,106 ms,0 kB/s
+175.206.201.181,30015,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,110 ms,0 kB/s
+121.182.19.164,11965,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,186 ms,0 kB/s
+59.19.92.232,20000,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,126 ms,0 kB/s
+59.3.3.161,8443,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,114 ms,0 kB/s
+121.177.44.158,10100,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,110 ms,0 kB/s
+14.55.213.131,10088,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,111 ms,0 kB/s
+183.104.5.134,26214,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,132 ms,0 kB/s
+118.45.152.231,30004,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,101 ms,0 kB/s
+211.230.207.90,10046,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,156 ms,0 kB/s
+221.156.244.231,20056,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,115 ms,0 kB/s
+118.43.198.217,10299,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,120 ms,0 kB/s
+183.99.47.189,10101,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,131 ms,0 kB/s
+121.133.232.246,37810,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,120 ms,0 kB/s
+221.153.174.159,30019,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,122 ms,0 kB/s
+59.21.252.156,37810,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,127 ms,0 kB/s
+59.18.139.84,18086,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,131 ms,0 kB/s
+121.154.93.118,10912,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,119 ms,0 kB/s
+222.96.225.202,20201,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,118 ms,0 kB/s
+222.117.231.32,38241,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,126 ms,0 kB/s
+119.205.235.58,443,true,ICN,KR,Asia Pacific,Seoul,亚洲,韩国,首尔,🇰🇷,118 ms,0 kB/s
+183.109.205.79,11965,true,LAX,KR,North America,Los Angeles,北美洲,美国,洛杉矶,🇺🇸,246 ms,0 kB/s
+112.163.51.148,20000,true,LAX,KR,North America,Los Angeles,北美洲,美国,洛杉矶,🇺🇸,250 ms,0 kB/s
+112.167.75.77,18810,true,LAX,KR,North America,Los Angeles,北美洲,美国,洛杉矶,🇺🇸,227 ms,0 kB/s
+14.55.153.119,13666,true,LAX,KR,North America,Los Angeles,北美洲,美国,洛杉矶,🇺🇸,233 ms,0 kB/s
