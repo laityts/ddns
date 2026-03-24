@@ -1,0 +1,54 @@
+IP地址,端口,TLS,数据中心,源IP位置,地区,城市,地区(中文),国家,城市(中文),国旗,网络延迟,下载速度
+1.162.82.44,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,31 ms,0 kB/s
+220.128.110.108,43,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,40 ms,0 kB/s
+114.34.106.124,10443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,30 ms,0 kB/s
+220.135.92.105,2087,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,28 ms,0 kB/s
+122.116.105.15,995,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,29 ms,0 kB/s
+114.32.9.249,16443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,31 ms,0 kB/s
+1.162.82.44,8443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,27 ms,0 kB/s
+60.251.232.240,995,true,KHH,TW,Asia Pacific,Kaohsiung City,亚洲,台湾,高雄市,🇹🇼,55 ms,0 kB/s
+114.33.57.170,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,61 ms,0 kB/s
+27.147.13.51,10243,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,48 ms,0 kB/s
+60.248.139.106,11017,true,KHH,TW,Asia Pacific,Kaohsiung City,亚洲,台湾,高雄市,🇹🇼,72 ms,0 kB/s
+27.147.13.55,10243,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,53 ms,0 kB/s
+27.147.13.52,10243,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,51 ms,0 kB/s
+60.248.139.106,12128,true,KHH,TW,Asia Pacific,Kaohsiung City,亚洲,台湾,高雄市,🇹🇼,66 ms,0 kB/s
+114.32.9.249,51443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,30 ms,0 kB/s
+180.214.180.226,444,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,84 ms,0 kB/s
+60.248.139.106,18081,true,KHH,TW,Asia Pacific,Kaohsiung City,亚洲,台湾,高雄市,🇹🇼,75 ms,0 kB/s
+27.147.13.57,10243,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,50 ms,0 kB/s
+60.248.139.106,12755,true,KHH,TW,Asia Pacific,Kaohsiung City,亚洲,台湾,高雄市,🇹🇼,58 ms,0 kB/s
+178.173.254.224,443,true,AMS,NL,Europe,Amsterdam,欧洲,荷兰,阿姆斯特丹,🇳🇱,201 ms,0 kB/s
+141.98.191.111,7443,true,ARN,RU,Europe,Stockholm,欧洲,瑞典,斯德哥尔摩,🇸🇪,190 ms,0 kB/s
+82.152.90.213,8080,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,224 ms,0 kB/s
+61.30.130.106,10255,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,259 ms,0 kB/s
+213.210.4.131,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,238 ms,0 kB/s
+213.210.4.45,8443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,223 ms,0 kB/s
+202.153.4.51,1443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,282 ms,0 kB/s
+151.242.188.44,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,239 ms,0 kB/s
+64.49.28.190,443,true,LAX,US,North America,Los Angeles,北美洲,美国,洛杉矶,🇺🇸,240 ms,0 kB/s
+167.253.153.182,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,352 ms,0 kB/s
+167.253.153.214,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,376 ms,0 kB/s
+167.253.153.147,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,366 ms,0 kB/s
+167.253.153.228,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,359 ms,0 kB/s
+167.253.153.6,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,381 ms,0 kB/s
+167.253.153.126,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,380 ms,0 kB/s
+167.253.153.22,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,365 ms,0 kB/s
+167.253.153.253,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,366 ms,0 kB/s
+167.253.153.44,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,318 ms,0 kB/s
+167.253.153.125,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,377 ms,0 kB/s
+167.253.153.163,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,366 ms,0 kB/s
+167.253.153.73,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,368 ms,0 kB/s
+167.253.153.215,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,358 ms,0 kB/s
+167.253.153.47,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,303 ms,0 kB/s
+167.253.153.80,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,330 ms,0 kB/s
+167.253.153.161,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,376 ms,0 kB/s
+167.253.153.32,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,382 ms,0 kB/s
+167.253.153.108,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,368 ms,0 kB/s
+167.253.153.58,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,356 ms,0 kB/s
+167.253.153.76,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,388 ms,0 kB/s
+35.206.253.17,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,376 ms,0 kB/s
+212.192.8.178,2053,true,HEL,FI,Europe,Helsinki,欧洲,芬兰,赫尔辛基,🇫🇮,354 ms,0 kB/s
+112.105.55.223,14430,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,396 ms,0 kB/s
+167.253.153.28,443,true,TPE,TW,Asia Pacific,Taipei,亚洲,台湾,台北,🇹🇼,343 ms,0 kB/s
+212.192.8.241,443,true,HEL,FI,Europe,Helsinki,欧洲,芬兰,赫尔辛基,🇫🇮,405 ms,0 kB/s
