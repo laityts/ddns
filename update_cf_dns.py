@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 更新 Cloudflare DNS 记录的 IP 地址
-支持从本地 JSON 配置文件读取敏感信息（如 API Token）
+支持从本地配置文件读取 API Token、域名、记录名、IP、代理等敏感信息
 """
 
 import os
@@ -9,7 +9,29 @@ import sys
 import json
 import argparse
 import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
+DEFAULT_RETRIES = 3
+DEFAULT_TIMEOUT = 30
+
+def create_session(retries=DEFAULT_RETRIES, proxies=None):
+    """创建带重试和代理的 requests Session"""
+    session = requests.Session()
+    # 重试策略
+    retry_strategy = Retry(
+        total=retries,
+        backoff_factor=1,
+        status_forcelist=[429, 500, 502, 503, 504],
+        allowed_methods=["GET", "PUT"]
+    )
+    adapter = HTTPAdapter(max_retries=retry_strategy)
+    session.mount("https://", adapter)
+    session.mount("http://", adapter)
+    # 设置代理
+    if proxies:
+        session.proxies.update(proxies)
+    return session
 
 def load_config(config_file):
     """从 JSON 文件加载配置"""
@@ -24,53 +46,57 @@ def load_config(config_file):
         print(f"错误：配置文件 {config_file} 格式错误: {e}", file=sys.stderr)
         sys.exit(1)
 
-
-def get_zone_id(api_token, domain):
+def get_zone_id(session, api_token, domain):
     """获取域名的 Zone ID"""
     url = f"https://api.cloudflare.com/client/v4/zones?name={domain}"
     headers = {
         "Authorization": f"Bearer {api_token}",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "User-Agent": "Cloudflare-DNS-Updater/1.0"
     }
-    response = requests.get(url, headers=headers)
-    if response.status_code != 200:
-        raise Exception(f"获取 Zone ID 失败: {response.text}")
-    data = response.json()
-    if not data['success']:
-        raise Exception(f"API 错误: {data['errors']}")
-    zones = data['result']
-    if not zones:
-        raise Exception(f"未找到域名 {domain} 对应的 Zone")
-    return zones[0]['id']
+    try:
+        response = session.get(url, headers=headers, timeout=DEFAULT_TIMEOUT)
+        response.raise_for_status()
+        data = response.json()
+        if not data['success']:
+            raise Exception(f"API 错误: {data['errors']}")
+        zones = data['result']
+        if not zones:
+            raise Exception(f"未找到域名 {domain} 对应的 Zone")
+        return zones[0]['id']
+    except requests.exceptions.RequestException as e:
+        raise Exception(f"获取 Zone ID 失败: {e}")
 
-
-def get_dns_record_id(api_token, zone_id, record_name, record_type):
+def get_dns_record_id(session, api_token, zone_id, record_name, record_type):
     """通过名称和类型获取 DNS 记录 ID"""
     url = f"https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records"
     params = {"name": record_name, "type": record_type}
     headers = {
         "Authorization": f"Bearer {api_token}",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "User-Agent": "Cloudflare-DNS-Updater/1.0"
     }
-    response = requests.get(url, headers=headers, params=params)
-    if response.status_code != 200:
-        raise Exception(f"获取 DNS 记录失败: {response.text}")
-    data = response.json()
-    if not data['success']:
-        raise Exception(f"API 错误: {data['errors']}")
-    records = data['result']
-    if not records:
-        raise Exception(f"未找到 {record_type} 记录: {record_name}")
-    return records[0]['id']
+    try:
+        response = session.get(url, headers=headers, params=params, timeout=DEFAULT_TIMEOUT)
+        response.raise_for_status()
+        data = response.json()
+        if not data['success']:
+            raise Exception(f"API 错误: {data['errors']}")
+        records = data['result']
+        if not records:
+            raise Exception(f"未找到 {record_type} 记录: {record_name}")
+        return records[0]['id']
+    except requests.exceptions.RequestException as e:
+        raise Exception(f"获取 DNS 记录 ID 失败: {e}")
 
-
-def update_dns_record(api_token, zone_id, record_id, record_name, record_type,
-                      new_ip, ttl=1, proxied=False):
+def update_dns_record(session, api_token, zone_id, record_id, record_name,
+                      record_type, new_ip, ttl=1, proxied=False):
     """更新 DNS 记录的 IP 地址"""
     url = f"https://api.cloudflare.com/client/v4/zones/{zone_id}/dns_records/{record_id}"
     headers = {
         "Authorization": f"Bearer {api_token}",
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "User-Agent": "Cloudflare-DNS-Updater/1.0"
     }
     data = {
         "type": record_type,
@@ -79,18 +105,19 @@ def update_dns_record(api_token, zone_id, record_id, record_name, record_type,
         "ttl": ttl,
         "proxied": proxied
     }
-    response = requests.put(url, headers=headers, json=data)
-    if response.status_code != 200:
-        raise Exception(f"更新 DNS 记录失败: {response.text}")
-    result = response.json()
-    if not result['success']:
-        raise Exception(f"API 错误: {result['errors']}")
-    return result
-
+    try:
+        response = session.put(url, headers=headers, json=data, timeout=DEFAULT_TIMEOUT)
+        response.raise_for_status()
+        result = response.json()
+        if not result['success']:
+            raise Exception(f"API 错误: {result['errors']}")
+        return result
+    except requests.exceptions.RequestException as e:
+        raise Exception(f"更新 DNS 记录失败: {e}")
 
 def main():
     parser = argparse.ArgumentParser(
-        description="更新 Cloudflare DNS 记录的 IP 地址（支持本地配置文件）"
+        description="更新 Cloudflare DNS 记录的 IP 地址（支持本地配置文件及代理）"
     )
     parser.add_argument("--config", default="cf_config.json",
                         help="本地配置文件路径（JSON 格式），默认 cf_config.json")
@@ -104,6 +131,7 @@ def main():
                         help="启用 Cloudflare 代理（橙色云）")
     parser.add_argument("--api-token",
                         help="Cloudflare API Token（优先级高于配置文件）")
+    parser.add_argument("--proxy", help="代理地址，如 http://127.0.0.1:7890（优先级高于配置文件）")
     args = parser.parse_args()
 
     # 加载本地配置文件
@@ -117,6 +145,17 @@ def main():
     ttl = args.ttl if args.ttl != 1 else config.get("ttl", 1)
     proxied = args.proxied or config.get("proxied", False)
     api_token = args.api_token or config.get("api_token")
+    # 代理配置：支持字符串格式（如 "http://127.0.0.1:7890"）或字典格式（如 {"http": "...", "https": "..."}）
+    proxy_conf = args.proxy or config.get("proxy")
+    proxies = None
+    if proxy_conf:
+        if isinstance(proxy_conf, dict):
+            proxies = proxy_conf
+        elif isinstance(proxy_conf, str):
+            # 如果代理是字符串，同时用于 http 和 https
+            proxies = {"http": proxy_conf, "https": proxy_conf}
+        else:
+            print("警告：代理配置格式不正确，应为字符串或字典，已忽略", file=sys.stderr)
 
     # 检查必需参数
     if not domain:
@@ -132,22 +171,24 @@ def main():
         print("错误：未提供 API Token（--api-token 或配置文件中的 api_token）", file=sys.stderr)
         sys.exit(1)
 
+    # 创建带代理和重试的 Session
+    session = create_session(proxies=proxies)
+
     try:
         print("正在获取 Zone ID...")
-        zone_id = get_zone_id(api_token, domain)
+        zone_id = get_zone_id(session, api_token, domain)
 
         print("正在获取 DNS 记录 ID...")
-        record_id = get_dns_record_id(api_token, zone_id, name, record_type)
+        record_id = get_dns_record_id(session, api_token, zone_id, name, record_type)
 
         print(f"正在更新 {name} 的 IP 到 {new_ip}...")
-        update_dns_record(api_token, zone_id, record_id, name, record_type,
-                          new_ip, ttl, proxied)
+        update_dns_record(session, api_token, zone_id, record_id, name,
+                          record_type, new_ip, ttl, proxied)
 
         print(f"成功！记录 {name} 已更新为 {new_ip}")
     except Exception as e:
         print(f"错误: {e}", file=sys.stderr)
         sys.exit(1)
-
 
 if __name__ == "__main__":
     main()

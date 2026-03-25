@@ -1,17 +1,17 @@
 查询非标端口的CF反代IP
 
-server=="cloudflare" && header="Forbidden" && title=="403 Forbidden" && asn!="13335" && asn!="209242" && is_domain=false && region="HK" && after="2026-01-01" && port!="80" && port!="443"
+server=="cloudflare" && header="Forbidden" && status_code!="1034" && asn!="13335" && asn!="209242" && is_domain=false && region="HK" && after="2026-01-01" && port!="80" && port!="443"
 
-server=="cloudflare" && header="Forbidden" && title=="403 Forbidden" && asn!="13335" && asn!="209242" && is_domain=false && country="KR"
+server=="cloudflare" && header="Forbidden" && status_code!="1034" && asn!="13335" && asn!="209242" && is_domain=false && country="KR"
 
 查询as3462(傻龙)台湾反代ip
-server=="cloudflare" && header="Forbidden" && title=="403 Forbidden" && asn=="3462" && is_domain=false && region="TW" && after="2026-01-01"
+server=="cloudflare" && header="Forbidden" && status_code!="1034" && asn=="3462" && is_domain=false && region="TW" && after="2026-01-01"
 
 查询as4766/3786/9318/17858韩国的反代ip
-server=="cloudflare" && header="Forbidden" && title=="403 Forbidden" && asn=="4766" && is_domain=false && country="KR" && port="50000" && after="2026-01-01"
+server=="cloudflare" && header="Forbidden" && status_code!="1034" && asn=="4766" && is_domain=false && country="KR" && port="50000" && after="2026-01-01"
 
 查询as4760香港的反代ip
-server=="cloudflare" && header="Forbidden" && title=="403 Forbidden" && asn=="4760" && is_domain=false && region="HK" && port="443" && after="2026-01-01"
+server=="cloudflare" && header="Forbidden" && status_code!="1034" && asn=="4760" && is_domain=false && region="HK" && port="443" && after="2026-01-01"
 
 - 国内反代IP：server=="cloudflare" && port=="80" && header="Forbidden" && country=="CN"
 - 剔除CF：asn!="13335" && asn!="209242"

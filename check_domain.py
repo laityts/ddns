@@ -31,7 +31,8 @@ PROXY_LIST = [
     "tw.vlato.site:443",
     "se.vlato.site:443",
     "kr.vlato.site:50001",
-    "hk.vlato.site:443"
+    "hk.vlato.site:443",
+    "tp50001.kr.proxyip.fgfw.eu.org:50001"
 ]
 
 def check_termux():
