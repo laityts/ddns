@@ -30,7 +30,8 @@ file_lock = threading.Lock()
 PROXY_LIST = [
     "tw.vlato.site:443",
     "se.vlato.site:443",
-    "kr.vlato.site:50001"
+    "kr.vlato.site:50001",
+    "hk.vlato.site:443"
 ]
 
 def check_termux():
