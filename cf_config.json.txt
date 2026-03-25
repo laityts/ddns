@@ -1,0 +1,9 @@
+{
+    "api_token": "cfu_xxxxxxxx",
+    "domain": "vlato.site",
+    "name": "xx.vlato.site",
+    "type": "A",
+    "ip": "1.2.3.4",
+    "ttl": 1,
+    "proxied": false
+}
